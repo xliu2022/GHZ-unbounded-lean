@@ -1,0 +1,25 @@
+Supplement Challenge instance alignment
+
+The original standalone Challenge inferred the natural-number maximum
+semilattice through instDistribLatticeNat, whereas the Solution closure used
+Nat.instLattice. Both are the ordinary order on natural numbers, but Comparator
+compares the elaborated definitions exactly, not only up to definitional
+reduction.
+
+The Challenge now imports the canonical Mathlib.Order.Lattice.Nat and fixes
+the Finset.sup instance explicitly to Lattice.toSemilatticeSup Nat.instLattice.
+No theorem assumption, conclusion, proof source, permitted axiom, or checker
+implementation was changed.
+
+In the session before the execution environment was lost, the corrected
+Challenge compiled and compare-and-axioms completed with exit code 0 for
+all 17 selected supplement theorems (88.598 seconds). The recorded exports were:
+challenge: 19,172,161 bytes
+  c8a6b27980e7b52ea68c38aef90b20f7e70518438f3a6f9e15f8220380574de5
+solution: 1,898,004,009 bytes
+  bb09a86561b84ce4343a5309366c902c06eca7bd2e177e69294bb284af383078
+
+This note records the observed pre-interruption comparison, not a recovered
+complete replay report. The environment was lost during Lean's kernel replay;
+no successful Lean or NanoDa completion was observed for this configuration.
+A fresh full local diagnostic run is required to produce its final report.

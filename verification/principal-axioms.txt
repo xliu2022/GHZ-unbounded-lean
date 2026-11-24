@@ -1,0 +1,2698 @@
+⚠ [3092/3162] Replayed RigidGHZ.Partite
+warning: RigidGHZ/Partite.lean:287:36: `Equiv.apply_eq_iff_eq_symm_apply` has been deprecated: Use `Equiv.eq_symm_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u_1} {β : Sort u_2} (e : α ≃ β) {x : β} {y : α}, y = e.symm x ↔ e y = x
+instead of
+  ∀ {α : Sort u} {β : Sort v} {x : α} {y : β} (f : α ≃ β), f x = y ↔ x = f.symm y
+warning: RigidGHZ/Partite.lean:305:37: `Equiv.apply_eq_iff_eq_symm_apply` has been deprecated: Use `Equiv.eq_symm_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u_1} {β : Sort u_2} (e : α ≃ β) {x : β} {y : α}, y = e.symm x ↔ e y = x
+instead of
+  ∀ {α : Sort u} {β : Sort v} {x : α} {y : β} (f : α ≃ β), f x = y ↔ x = f.symm y
+⚠ [3093/3162] Replayed RigidGHZ.Relabel
+warning: RigidGHZ/Relabel.lean:25:1: automatically included section variable(s) unused in theorem `RigidGHZ.relabelEdge_injective`:
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Relabel.lean:28:8: automatically included section variable(s) unused in theorem `RigidGHZ.mem_relabelEdge`:
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Relabel.lean:37:8: automatically included section variable(s) unused in theorem `RigidGHZ.relabelEdge_card`:
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Relabel.lean:162:4: Unused tactic linter: `change j = (f (v i)).2` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3095/3162] Replayed RigidGHZ.Construction.CyclicBaseline
+warning: RigidGHZ/Construction/CyclicBaseline.lean:28:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: RigidGHZ/Construction/CyclicBaseline.lean:74:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: RigidGHZ/Construction/CyclicBaseline.lean:78:47: This simp argument is unused:
+  hfree
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [binaryCoordinates, binaryPerm, Ne.symm (hfree w)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3097/3162] Replayed RigidGHZ.UpperBounds.Reciprocal
+warning: RigidGHZ/UpperBounds/Reciprocal.lean:44:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/UpperBounds/Reciprocal.lean:101:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/UpperBounds/Reciprocal.lean:120:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/UpperBounds/Reciprocal.lean:185:0: automatically included section variable(s) unused in theorem `RigidGHZ.UpperBounds.hereditarySink_reciprocal`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/UpperBounds/Reciprocal.lean:241:11: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/UpperBounds/Reciprocal.lean:260:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3481/3616] Replayed RigidGHZ.UpperBounds.Average
+warning: RigidGHZ/UpperBounds/Average.lean:86:10: This simp argument is unused:
+  Nat.cast_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/UpperBounds/Average.lean:116:27: Unused tactic linter: `congr 1` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/UpperBounds/Average.lean:116:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RigidGHZ/UpperBounds/Average.lean:116:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RigidGHZ/UpperBounds/Average.lean:118:0: automatically included section variable(s) unused in theorem `RigidGHZ.UpperBounds.product_block_bound`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/UpperBounds/Average.lean:142:33: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_add, integral_pow, one_pow, one_div, inv_inv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/UpperBounds/Average.lean:142:51: This simp argument is unused:
+  one_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_add, ht, integral_pow, one_div, inv_inv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3483/3616] Replayed RigidGHZ.UpperBounds.RepresentativeCounts
+warning: RigidGHZ/UpperBounds/RepresentativeCounts.lean:27:0: automatically included section variable(s) unused in theorem `RigidGHZ.UpperBounds.selectedRepresentative_mem`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/UpperBounds/RepresentativeCounts.lean:38:8: automatically included section variable(s) unused in theorem `RigidGHZ.UpperBounds.mem_blockHits`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3484/3616] Replayed RigidGHZ.UpperBounds.Shadow
+warning: RigidGHZ/UpperBounds/Shadow.lean:93:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/UpperBounds/Shadow.lean:136:0: automatically included section variable(s) unused in theorem `RigidGHZ.UpperBounds.shadow_contribution_sum_le_card`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3485/3616] Replayed RigidGHZ.UpperBounds.Partite
+warning: RigidGHZ/UpperBounds/Partite.lean:39:8: automatically included section variable(s) unused in theorem `RigidGHZ.UpperBounds.replacedTuple_at`:
+  [Fintype A]
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/UpperBounds/Partite.lean:42:8: automatically included section variable(s) unused in theorem `RigidGHZ.UpperBounds.replacedTuple_away`:
+  [Fintype A]
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/UpperBounds/Partite.lean:77:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/UpperBounds/Partite.lean:139:31: This simp argument is unused:
+  and_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [N, tupleExchangeArc, and_left_comm, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/UpperBounds/Partite.lean:139:41: This simp argument is unused:
+  and_left_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [N, tupleExchangeArc, and_comm, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3507/3616] Replayed RigidGHZ.UpperBounds.Corollaries
+warning: RigidGHZ/UpperBounds/Corollaries.lean:35:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/UpperBounds/Corollaries.lean:50:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3509/3616] Replayed RigidGHZ.MatchingCore
+warning: RigidGHZ/MatchingCore.lean:70:0: automatically included section variable(s) unused in theorem `RigidGHZ.IsRigid.pairwiseDisjointPerfectMatchings`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3510/3616] Replayed RigidGHZ.EdgeColoring
+warning: RigidGHZ/EdgeColoring.lean:25:0: automatically included section variable(s) unused in theorem `RigidGHZ.EdgeColoring.colorClass_subset`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/EdgeColoring.lean:30:0: automatically included section variable(s) unused in theorem `RigidGHZ.EdgeColoring.mem_colorClass`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/EdgeColoring.lean:41:0: automatically included section variable(s) unused in theorem `RigidGHZ.EdgeColoring.Proper.eq_of_common`:
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3511/3616] Replayed RigidGHZ.Product
+warning: RigidGHZ/Product.lean:23:0: automatically included section variable(s) unused in theorem `RigidGHZ.Product.perm_mem_iff_of_fixes_complement`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Product.lean:41:0: automatically included section variable(s) unused in theorem `RigidGHZ.Product.support_index_unique`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Product.lean:52:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Product.lean:56:0: automatically included section variable(s) unused in theorem `RigidGHZ.Product.assembleMap_of_not_mem`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Product.lean:133:8: automatically included section variable(s) unused in theorem `RigidGHZ.Product.restrictPermutation_apply`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Product.lean:177:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Product.lean:179:44: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Product.lean:187:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [3512/3616] Replayed RigidGHZ.ProductHypergraph
+warning: RigidGHZ/ProductHypergraph.lean:62:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3514/3616] Replayed RigidGHZ.SupportProduct
+warning: RigidGHZ/SupportProduct.lean:87:8: automatically included section variable(s) unused in theorem `RigidGHZ.relabelProjection_apply`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/SupportProduct.lean:90:8: automatically included section variable(s) unused in theorem `RigidGHZ.relabelTag_apply`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/SupportProduct.lean:93:1: automatically included section variable(s) unused in theorem `RigidGHZ.relabelProjection_fixes`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/SupportProduct.lean:102:1: automatically included section variable(s) unused in theorem `RigidGHZ.relabel_factor_purity`:
+  [Fintype W]
+  [DecidableEq W]
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/SupportProduct.lean:131:1: automatically included section variable(s) unused in theorem `RigidGHZ.relabel_factor_separation`:
+  [Fintype W]
+  [DecidableEq W]
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3517/3616] Replayed RigidGHZ.Construction.GrowthAssembly
+warning: RigidGHZ/Construction/GrowthAssembly.lean:82:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3522/3616] Replayed RigidGHZ.Construction.OwnerPatterns
+warning: RigidGHZ/Construction/OwnerPatterns.lean:73:41: Variable name `hb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Construction/OwnerPatterns.lean:96:12: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Pattern.residual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/OwnerPatterns.lean:114:12: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Pattern.residual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/OwnerPatterns.lean:135:12: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Pattern.residual] at hxp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/OwnerPatterns.lean:139:14: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Pattern.residual] at hxq
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/OwnerPatterns.lean:157:14: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Pattern.residual] at hxq
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3524/3616] Replayed RigidGHZ.Construction.PlacedPatterns
+warning: RigidGHZ/Construction/PlacedPatterns.lean:20:1: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.owner_map_subset`:
+  [Fintype K]
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [DecidableEq K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/PlacedPatterns.lean:26:1: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.residual_map_subset`:
+  [Fintype K]
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype K] [DecidableEq K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/PlacedPatterns.lean:63:1: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.residualPool_subset_full`:
+  [DecidableEq K]
+  hprimary
+  hsep
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] hprimary hsep in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/PlacedPatterns.lean:111:0: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.active_owner_of_primary_hit`:
+  [DecidableEq K]
+  hprimary
+  hsep
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] hprimary hsep in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/PlacedPatterns.lean:163:1: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.ownerBlock_nonempty`:
+  [DecidableEq K]
+  hprimary
+  hsep
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] hprimary hsep in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3526/3616] Replayed RigidGHZ.Selector.DoubleComb
+warning: RigidGHZ/Selector/DoubleComb.lean:117:52: This simp argument is unused:
+  Vertex.branch.injEq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Vertex.upper.injEq, Vertex.lower.injEq, Fin.mk.injEq, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Selector/DoubleComb.lean:140:21: This simp argument is unused:
+  Nat.add_le_add_iff_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [routeAt, ha]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Selector/DoubleComb.lean:160:15: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Selector/DoubleComb.lean:165:15: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Selector/DoubleComb.lean:208:15: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Selector/DoubleComb.lean:213:15: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3529/3616] Replayed RigidGHZ.Selector.DoubleCombArcs
+warning: RigidGHZ/Selector/DoubleCombArcs.lean:203:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.DoubleComb.shared_nonloop_shape`:
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/DoubleCombArcs.lean:229:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.DoubleComb.exists_upper_point`:
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/DoubleCombArcs.lean:236:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.DoubleComb.exists_lower_point`:
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3531/3616] Replayed RigidGHZ.Selector.RealizeBlocks
+warning: RigidGHZ/Selector/RealizeBlocks.lean:45:10: Unused tactic linter: `change (ev v k).val ∈ B w` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3532/3616] Replayed RigidGHZ.Construction.OwnerBlockModel
+warning: RigidGHZ/Construction/OwnerBlockModel.lean:87:8: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.physicalBlocks_hub`:
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/OwnerBlockModel.lean:89:8: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.physicalBlocks_pattern`:
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/OwnerBlockModel.lean:94:8: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.physicalBlocks_private`:
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/OwnerBlockModel.lean:105:1: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.private_ownerBlock_disjoint`:
+  hprimary
+  hsep
+  hgrid
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hprimary hsep hgrid in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Construction/OwnerBlockModel.lean:154:1: automatically included section variable(s) unused in theorem `RigidGHZ.Rectangle.physicalBlocks_nonempty`:
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3533/3616] Replayed RigidGHZ.Construction.RectangleAnchors
+warning: RigidGHZ/Construction/RectangleAnchors.lean:46:42: Variable name `hw` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hw
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3538/3616] Replayed RigidGHZ.Selector.Completion
+warning: RigidGHZ/Selector/Completion.lean:59:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Selector/Completion.lean:62:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Selector/Completion.lean:66:25: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Selector/Completion.lean:66:36: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [3539/3616] Replayed RigidGHZ.Selector.AnchorPools
+warning: RigidGHZ/Selector/AnchorPools.lean:21:0: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.assign_shared_anchors`:
+  [Fintype W]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3541/3616] Replayed RigidGHZ.Selector.ArcFamilies
+warning: RigidGHZ/Selector/ArcFamilies.lean:43:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Selector/ArcFamilies.lean:15:0: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.anchors_from_arc_families`:
+  [Fintype I]
+  [Module ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Module ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/ArcFamilies.lean:19:5: Variable name `hnonloop` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hnonloop
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3544/3616] Replayed RigidGHZ.Selector.RealizedComb
+warning: RigidGHZ/Selector/RealizedComb.lean:32:0: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.combRealization_nonempty`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/RealizedComb.lean:137:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.onRoute_patternVertex`:
+  [Fintype R]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/RealizedComb.lean:139:60: This simp argument is unused:
+  Nat.succ_le_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [patternVertex, OnRoute, Pattern.occurs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Selector/RealizedComb.lean:148:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.CombRealization.fixes_complement`:
+  [DecidableEq R]
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq R] [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/RealizedComb.lean:154:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.CombRealization.activeSupport_card`:
+  [DecidableEq R]
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq R] [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/RealizedComb.lean:160:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.CombRealization.moved_pattern`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3545/3616] Replayed RigidGHZ.Construction.RectangularFactor
+warning: RigidGHZ/Construction/RectangularFactor.lean:67:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3546/3616] Replayed RigidGHZ.Construction.RectangleEstimates
+warning: RigidGHZ/Construction/RectangleEstimates.lean:87:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RigidGHZ/Construction/RectangleEstimates.lean:322:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/Construction/RectangleEstimates.lean:322:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RigidGHZ/Construction/RectangleEstimates.lean:340:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3552/3616] Replayed RigidGHZ.Construction.RectangleCapacity
+warning: RigidGHZ/Construction/RectangleCapacity.lean:83:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3553/3616] Replayed RigidGHZ.Construction.NumericalLayout
+warning: RigidGHZ/Construction/NumericalLayout.lean:94:67: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/NumericalLayout.lean:96:69: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/NumericalLayout.lean:99:67: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Construction/NumericalLayout.lean:102:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Construction/NumericalLayout.lean:96:6: This simp argument is unused:
+  Nat.cast_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [PackedLayout.area, numericalLayout, shortIndicator, if_pos hs, Nat.cast_add, Nat.cast_mul,
+    Nat.cast_sub hB, Nat.cast_sub hD, Nat.cast_ofNat, widthB_cast, gamma_cast, roundedArea, shortArea, if_pos hsr,
+    one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3555/3616] Replayed RigidGHZ.Construction.NumericalDemands
+warning: RigidGHZ/Construction/NumericalDemands.lean:29:75: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/NumericalDemands.lean:31:80: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/NumericalDemands.lean:35:75: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Construction/NumericalDemands.lean:38:25: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Construction/NumericalDemands.lean:53:73: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/NumericalDemands.lean:56:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/NumericalDemands.lean:59:73: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Construction/NumericalDemands.lean:62:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3557/3616] Replayed RigidGHZ.Construction.RectangleSites
+warning: RigidGHZ/Construction/RectangleSites.lean:94:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/Construction/RectangleSites.lean:132:20: This simp argument is unused:
+  ← Nat.cast_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [tagBox, box, Finset.card_product, Int.card_Ico, sub_zero, ← Nat.cast_add, Int.toNat_natCast,
+    mul_assoc]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3564/3616] Replayed RigidGHZ.Construction.PlanarGeometry
+warning: RigidGHZ/Construction/PlanarGeometry.lean:98:18: Variable name `w` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _w
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Construction/PlanarGeometry.lean:102:19: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Construction/PlanarGeometry.lean:130:44: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3566/3616] Replayed RigidGHZ.Construction.PlanarCounts
+warning: RigidGHZ/Construction/PlanarCounts.lean:74:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/Construction/PlanarCounts.lean:80:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/Construction/PlanarCounts.lean:93:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/Construction/PlanarCounts.lean:99:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/Construction/PlanarCounts.lean:291:44: Variable name `hb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3567/3616] Replayed RigidGHZ.Construction.PlanarPrivate
+warning: RigidGHZ/Construction/PlanarPrivate.lean:152:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RigidGHZ/Construction/PlanarPrivate.lean:164:5: Variable name `hh` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hh
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3568/3616] Replayed RigidGHZ.Construction.PlanarPatterns
+warning: RigidGHZ/Construction/PlanarPatterns.lean:188:63: Variable name `hb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Construction/PlanarPatterns.lean:203:64: Variable name `hb` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Construction/PlanarPatterns.lean:221:18: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [leftResidual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/PlanarPatterns.lean:231:18: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [rightResidual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/PlanarPatterns.lean:241:18: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [leftResidual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/PlanarPatterns.lean:259:18: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [rightResidual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3569/3616] Replayed RigidGHZ.Construction.PlanarPools
+warning: RigidGHZ/Construction/PlanarPools.lean:149:18: Variable name `hkT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hkT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3570/3616] Replayed RigidGHZ.Construction.PlanarOwners
+warning: RigidGHZ/Construction/PlanarOwners.lean:61:18: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [leftResidual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/PlanarOwners.lean:66:18: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [rightResidual] at hx
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Construction/PlanarOwners.lean:183:37: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Construction/PlanarOwners.lean:198:6: Unused tactic linter: `push_cast at hc hm` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3572/3616] Replayed RigidGHZ.Selector.PlanarComb
+warning: RigidGHZ/Selector/PlanarComb.lean:61:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hub, DoubleComb.Arc] at hc
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3573/3616] Replayed RigidGHZ.Selector.PlanarCombArcs
+warning: RigidGHZ/Selector/PlanarCombArcs.lean:311:64: This simp argument is unused:
+  dite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [upperSource, show ¬k.val + 1 = 0 by omega, Nat.add_sub_cancel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3574/3616] Replayed RigidGHZ.Selector.RealizedPlanarComb
+warning: RigidGHZ/Selector/RealizedPlanarComb.lean:40:0: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.PlanarComb.realization_nonempty`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/RealizedPlanarComb.lean:148:20: This simp argument is unused:
+  Nat.succ_le_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ownerBlock, prefixBlock, suffix, DoubleComb.OnRoute, Pattern.occurs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Selector/RealizedPlanarComb.lean:157:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.PlanarComb.Realization.fixes_complement`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/RealizedPlanarComb.lean:163:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.PlanarComb.Realization.activeSupport_card`:
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Selector/RealizedPlanarComb.lean:169:1: automatically included section variable(s) unused in theorem `RigidGHZ.Selector.PlanarComb.Realization.moved_pattern`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3577/3616] Replayed RigidGHZ.Construction.PlanarFactor
+warning: RigidGHZ/Construction/PlanarFactor.lean:39:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3578/3616] Replayed RigidGHZ.Construction.PlanarSites
+warning: RigidGHZ/Construction/PlanarSites.lean:63:56: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3582/3616] Replayed RigidGHZ.Construction.PrescribedSize
+warning: RigidGHZ/Construction/PrescribedSize.lean:27:58: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3585/3616] Replayed RigidGHZ.Construction.SupportCardinality
+warning: RigidGHZ/Construction/SupportCardinality.lean:66:53: This simp argument is unused:
+  add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [pow_two, mul_assoc, add_comm, add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3587/3616] Replayed RigidGHZ.Construction.CalibrationLimits
+warning: RigidGHZ/Construction/CalibrationLimits.lean:37:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RigidGHZ/Construction/CalibrationLimits.lean:115:52: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3588/3616] Replayed RigidGHZ.Construction.PrivateAmountLimits
+warning: RigidGHZ/Construction/PrivateAmountLimits.lean:31:29: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Construction/PrivateAmountLimits.lean:84:81: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3589/3616] Replayed RigidGHZ.Construction.RoundedOwnerCounts
+warning: RigidGHZ/Construction/RoundedOwnerCounts.lean:62:50: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/RoundedOwnerCounts.lean:65:88: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Construction/RoundedOwnerCounts.lean:69:50: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Construction/RoundedOwnerCounts.lean:72:88: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3600/3616] Replayed RigidGHZ.UpperBounds.Degree
+warning: RigidGHZ/UpperBounds/Degree.lean:51:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3632/3911] Replayed RigidGHZ.Finite.SatKernel
+warning: RigidGHZ/Finite/SatKernel.lean:83:39: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: RigidGHZ/Finite/SatKernel.lean:83:48: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: RigidGHZ/Finite/SatKernel.lean:83:39: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: RigidGHZ/Finite/SatKernel.lean:83:48: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [3634/3911] Replayed RigidGHZ.Finite.NineSATModel
+warning: RigidGHZ/Finite/NineSATModel.lean:31:31: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Finite/NineSATModel.lean:37:31: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Finite/NineSATModel.lean:37:43: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Finite/NineSATModel.lean:49:31: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Finite/NineSATModel.lean:49:43: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3784/3911] Replayed RigidGHZ.Finite.NinePairCount
+warning: RigidGHZ/Finite/NinePairCount.lean:30:35: This simp argument is unused:
+  or_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3786/3911] Replayed RigidGHZ.Supplement.Doubling
+warning: RigidGHZ/Supplement/Doubling.lean:26:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/Doubling.lean:39:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: RigidGHZ/Supplement/Doubling.lean:78:40: This simp argument is unused:
+  hfree
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [q, Cyclic.binaryPerm, Ne.symm (hfree w)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3787/3911] Replayed RigidGHZ.Supplement.GraftData
+warning: RigidGHZ/Supplement/GraftData.lean:133:16: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [3791/3911] Replayed RigidGHZ.Supplement.GraftComplete
+warning: RigidGHZ/Supplement/GraftComplete.lean:80:18: Variable name `P` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _P
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3794/3911] Replayed RigidGHZ.Supplement.MatchingRestriction
+warning: RigidGHZ/Supplement/MatchingRestriction.lean:13:1: automatically included section variable(s) unused in theorem `RigidGHZ.Uniform.mono`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/MatchingRestriction.lean:21:1: automatically included section variable(s) unused in theorem `RigidGHZ.RigidFamily.exists_restriction`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/MatchingRestriction.lean:37:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.codegree_mono`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3803/3911] Replayed RigidGHZ.Finite.FivePairSemantics
+warning: RigidGHZ/Finite/FivePairSemantics.lean:15:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.family_crossFree`:
+  [Fintype I]
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Finite/FivePairSemantics.lean:28:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.family_left_injective`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Finite/FivePairSemantics.lean:37:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.family_right_injective`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Finite/FivePairSemantics.lean:58:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.leftFamily_subset`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Finite/FivePairSemantics.lean:63:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.rightFamily_subset`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Finite/FivePairSemantics.lean:78:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.left_difference_subset`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Finite/FivePairSemantics.lean:88:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.right_difference_subset`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3806/3911] Replayed RigidGHZ.Finite.FivePairRelabel
+warning: RigidGHZ/Finite/FivePairRelabel.lean:43:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.mapPair_injective`:
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Finite/FivePairRelabel.lean:49:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.FivePair.mapPair_disjoint`:
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3808/3911] Replayed RigidGHZ.Finite.TripartiteUpper
+warning: RigidGHZ/Finite/TripartiteUpper.lean:57:0: automatically included section variable(s) unused in theorem `RigidGHZ.Finite.source_eq_of_pair_row`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3810/3911] Replayed RigidGHZ.Finite.TripartiteUnique
+warning: RigidGHZ/Finite/TripartiteUnique.lean:178:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [h, Equiv.symm_apply_apply]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3814/3911] Replayed RigidGHZ.Finite.ExactCoverSAT
+warning: RigidGHZ/Finite/ExactCoverSAT.lean:35:24: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Finite/ExactCoverSAT.lean:116:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3819/3911] Replayed RigidGHZ.Finite.Seeds.U12
+warning: RigidGHZ/Finite/Seeds/U12.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3825/3911] Replayed RigidGHZ.Finite.Seeds.U15
+warning: RigidGHZ/Finite/Seeds/U15.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3830/3911] Replayed RigidGHZ.Finite.Seeds.U18
+warning: RigidGHZ/Finite/Seeds/U18.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3835/3911] Replayed RigidGHZ.Finite.Seeds.U21
+warning: RigidGHZ/Finite/Seeds/U21.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3840/3911] Replayed RigidGHZ.Finite.Seeds.U24
+warning: RigidGHZ/Finite/Seeds/U24.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3844/3911] Replayed RigidGHZ.Supplement.AffineSeed
+warning: RigidGHZ/Supplement/AffineSeed.lean:67:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.base_separate`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3874/3911] Replayed RigidGHZ.Supplement.AffineSymmetry
+warning: RigidGHZ/Supplement/AffineSymmetry.lean:32:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.translate_edge`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/AffineSymmetry.lean:73:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.translate_matching_injective`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3875/3911] Replayed RigidGHZ.Finite.Seeds.A47
+warning: RigidGHZ/Finite/Seeds/A47.lean:21:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3880/3911] Replayed RigidGHZ.SourceModel.Normalization
+warning: RigidGHZ/SourceModel/Normalization.lean:73:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/SourceModel/Normalization.lean:79:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/SourceModel/Normalization.lean:123:0: automatically included section variable(s) unused in theorem `RigidGHZ.SourceModel.nonempty_edges_of_uniform`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3883/3911] Replayed RigidGHZ.SourceModel.Probability
+warning: RigidGHZ/SourceModel/Probability.lean:55:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RigidGHZ/SourceModel/Probability.lean:72:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RigidGHZ/SourceModel/Probability.lean:141:0: automatically included section variable(s) unused in theorem `RigidGHZ.SourceModel.branchProbability_pos`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/SourceModel/Probability.lean:219:0: automatically included section variable(s) unused in theorem `RigidGHZ.SourceModel.homogeneous_branch_probability`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3887/3911] Replayed RigidGHZ.SourceModel.MainTheorem
+warning: RigidGHZ/SourceModel/MainTheorem.lean:51:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/SourceModel/MainTheorem.lean:58:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/SourceModel/MainTheorem.lean:63:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3888/3911] Replayed RigidGHZ.SourceModel.Schmidt
+warning: RigidGHZ/SourceModel/Schmidt.lean:55:28: This simp argument is unused:
+  EuclideanSpace.inner_single_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ghzSchmidtVector]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/SourceModel/Schmidt.lean:60:6: This simp argument is unused:
+  PiLp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ghzSchmidtVector, EuclideanSpace.inner_single_left, hc, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/SourceModel/Schmidt.lean:121:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/SourceModel/Schmidt.lean:183:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/SourceModel/Schmidt.lean:184:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3889/3911] Replayed RigidGHZ.SourceModel.SuccessAsymptotics
+warning: RigidGHZ/SourceModel/SuccessAsymptotics.lean:63:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RigidGHZ/SourceModel/SuccessAsymptotics.lean:159:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3890/3911] Replayed RigidGHZ.SourceModel.ConstructionAsymptotics
+warning: RigidGHZ/SourceModel/ConstructionAsymptotics.lean:107:53: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3892/3911] Replayed RigidGHZ.SourceModel.IndependentEvents
+warning: RigidGHZ/SourceModel/IndependentEvents.lean:127:0: automatically included section variable(s) unused in theorem `RigidGHZ.SourceModel.mode_count`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3898/3911] Replayed RigidGHZ.Supplement.GraftSemigroup
+warning: RigidGHZ/Supplement/GraftSemigroup.lean:54:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3900/3911] Replayed RigidGHZ.Supplement.SixLocality
+warning: RigidGHZ/Supplement/SixLocality.lean:21:0: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.SixCyclic.tau_odd`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/SixLocality.lean:24:0: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.SixCyclic.tau_even`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/SixLocality.lean:28:0: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.SixCyclic.natCast_ne_of_lt`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/SixLocality.lean:95:0: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.SixCyclic.thirdBase_eq_start`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/SixLocality.lean:99:0: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.SixCyclic.first_window`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/SixLocality.lean:106:0: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.SixCyclic.second_window`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/SixLocality.lean:147:0: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.SixCyclic.second_difference`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3904/3911] Replayed RigidGHZ.Finite.Seeds.A3
+warning: RigidGHZ/Finite/Seeds/A3.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3910/4171] Replayed RigidGHZ.Finite.Seeds.A5
+warning: RigidGHZ/Finite/Seeds/A5.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3914/4171] Replayed RigidGHZ.Finite.Seeds.A7
+warning: RigidGHZ/Finite/Seeds/A7.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3917/4171] Replayed RigidGHZ.Supplement.AffineDoubling
+warning: RigidGHZ/Supplement/AffineDoubling.lean:25:13: This simp argument is unused:
+  Finset.sum_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/AffineDoubling.lean:54:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/AffineDoubling.lean:52:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.bit_cast_injective`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/AffineDoubling.lean:85:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.double_sum`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/AffineDoubling.lean:148:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3920/4171] Replayed RigidGHZ.Supplement.CyclicLiftData
+warning: RigidGHZ/Supplement/CyclicLiftData.lean:58:8: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.liftPerm_apply`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/CyclicLiftData.lean:62:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.lift_zero`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/CyclicLiftData.lean:66:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.lift_base_sum`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/CyclicLiftData.lean:71:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.lift_sheet_difference`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3922/4171] Replayed RigidGHZ.Supplement.CyclicLiftSlices
+warning: RigidGHZ/Supplement/CyclicLiftSlices.lean:39:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.Selection.row_second`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/CyclicLiftSlices.lean:55:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.Selection.third_base`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3923/4171] Replayed RigidGHZ.Supplement.CyclicLiftComplete
+warning: RigidGHZ/Supplement/CyclicLiftComplete.lean:23:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.Selection.shift_at_row`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/CyclicLiftComplete.lean:48:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/CyclicLiftComplete.lean:56:34: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp at hbad
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Supplement/CyclicLiftComplete.lean:145:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3924/4171] Replayed RigidGHZ.Supplement.CyclicLiftDegrees
+warning: RigidGHZ/Supplement/CyclicLiftDegrees.lean:63:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.lift_same_bit_pair`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3926/4171] Replayed RigidGHZ.Supplement.LinearLiftPairs
+warning: RigidGHZ/Supplement/LinearLiftPairs.lean:22:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/LinearLiftPairs.lean:30:37: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [liftMap, sheetOffset, add_assoc] at hs
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Supplement/LinearLiftPairs.lean:37:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/LinearLiftPairs.lean:102:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.cast_small_ne_zero`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3927/4171] Replayed RigidGHZ.Supplement.LinearLift
+warning: RigidGHZ/Supplement/LinearLift.lean:102:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.deletedClasses_card`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/LinearLift.lean:115:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.shifted_class_deleted`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3928/4171] Replayed RigidGHZ.Supplement.MarkedBinary
+warning: RigidGHZ/Supplement/MarkedBinary.lean:42:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.tripleCode_injective`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/MarkedBinary.lean:93:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.pairCode_injective`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3929/4171] Replayed RigidGHZ.Supplement.LinearLiftBaseline
+warning: RigidGHZ/Supplement/LinearLiftBaseline.lean:79:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Affine.linearBaseline_pair`:
+  [NeZero m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3931/4171] Replayed RigidGHZ.Supplement.Periodic.Basic
+warning: RigidGHZ/Supplement/Periodic/Basic.lean:82:37: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3932/4171] Replayed RigidGHZ.Supplement.Periodic.Enumeration
+warning: RigidGHZ/Supplement/Periodic/Enumeration.lean:84:32: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/Enumeration.lean:139:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp at hB
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Supplement/Periodic/Enumeration.lean:146:8: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp at hB
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Supplement/Periodic/Enumeration.lean:165:29: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/Enumeration.lean:172:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [3933/4171] Replayed RigidGHZ.Supplement.Periodic.Transfer
+warning: RigidGHZ/Supplement/Periodic/Transfer.lean:25:41: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/Transfer.lean:29:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/Transfer.lean:113:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3961/4171] Replayed RigidGHZ.Supplement.Periodic.Eleven
+warning: RigidGHZ/Supplement/Periodic/Eleven.lean:21:11: Variable name `A` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _A
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RigidGHZ/Supplement/Periodic/Eleven.lean:21:44: Variable name `A` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _A
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3970/4171] Replayed RigidGHZ.Supplement.Periodic.GroupedEnumeration
+warning: RigidGHZ/Supplement/Periodic/GroupedEnumeration.lean:80:34: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/GroupedEnumeration.lean:102:16: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/GroupedEnumeration.lean:103:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [3972/4171] Replayed RigidGHZ.Supplement.Periodic.Geometry
+warning: RigidGHZ/Supplement/Periodic/Geometry.lean:15:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.Scheme.graph_balanced`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/Periodic/Geometry.lean:50:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/Geometry.lean:52:15: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/Geometry.lean:43:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.Scheme.same_edge_disjoint`:
+  [Fintype V]
+  [Fintype E]
+  [Fintype L]
+  [DecidableEq E]
+  [DecidableEq L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [Fintype L] [DecidableEq E] [DecidableEq L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3979/4171] Replayed RigidGHZ.Supplement.Periodic.BitEnumeration
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:30:8: This simp argument is unused:
+  Nat.testBit_lor
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:34:8: This simp argument is unused:
+  Nat.testBit_land
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:62:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.BitScheme.compatible_iff`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:70:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.BitScheme.cover_iff`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:101:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:101:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:109:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/BitEnumeration.lean:109:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [4000/4171] Replayed RigidGHZ.Supplement.Periodic.Latin
+warning: RigidGHZ/Supplement/Periodic/Latin.lean:18:9: Variable name `B` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _B
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4002/4171] Replayed RigidGHZ.Supplement.Periodic.TracePaths
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:34:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.WeightedWalks.chain_head_tail`:
+  [Fintype S]
+  [Fintype C]
+  [DecidableEq S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype S] [Fintype C] [DecidableEq S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:70:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:71:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:73:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:79:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:63:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.WeightedWalks.path_zero_card`:
+  [Fintype S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:73:15: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/TracePaths.lean:93:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.WeightedWalks.chain_ofFn`:
+  [Fintype S]
+  [Fintype C]
+  [DecidableEq S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype S] [Fintype C] [DecidableEq S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4004/4171] Replayed RigidGHZ.Supplement.Periodic.MatrixHeight
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:103:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:103:38: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:144:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:144:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:203:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:208:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:174:37: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RigidGHZ/Supplement/Periodic/MatrixHeight.lean:174:37: Unused tactic linter: `exact (hsnt ‹s = t›).elim` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [4005/4171] Replayed RigidGHZ.Supplement.Periodic.TraceCertificates
+warning: RigidGHZ/Supplement/Periodic/TraceCertificates.lean:42:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.Scheme.diagonal_le_one`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RigidGHZ/Supplement/Periodic/TraceCertificates.lean:60:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.Scheme.diagonal_zero`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4009/4171] Replayed RigidGHZ.Supplement.Periodic.BitEnumerationFrom
+warning: RigidGHZ/Supplement/Periodic/BitEnumerationFrom.lean:32:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/BitEnumerationFrom.lean:32:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/BitEnumerationFrom.lean:40:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RigidGHZ/Supplement/Periodic/BitEnumerationFrom.lean:40:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [4011/4171] Replayed RigidGHZ.Supplement.Periodic.BitOutput
+warning: RigidGHZ/Supplement/Periodic/BitOutput.lean:18:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/BitOutput.lean:29:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [4025/4171] Replayed RigidGHZ.Supplement.Periodic.EnumerationStats
+warning: RigidGHZ/Supplement/Periodic/EnumerationStats.lean:46:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp at hB
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RigidGHZ/Supplement/Periodic/EnumerationStats.lean:50:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RigidGHZ/Supplement/Periodic/EnumerationStats.lean:52:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [4037/4171] Replayed RigidGHZ.Supplement.Periodic.Cardinality
+warning: RigidGHZ/Supplement/Periodic/Cardinality.lean:14:1: automatically included section variable(s) unused in theorem `RigidGHZ.Supplement.Periodic.Scheme.local_configuration_size_bound`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [4061/4171] Replayed RigidGHZ.Supplement.Periodic.LatinEnumerationOutput
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:41:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:41:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:41:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:42:13: This simp argument is unused:
+  ha2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:42:28: This simp argument is unused:
+  ha3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:42:43: This simp argument is unused:
+  ha4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:42:58: This simp argument is unused:
+  ha5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:42:73: This simp argument is unused:
+  ha6
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:42:88: This simp argument is unused:
+  ha7
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:74:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:74:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:74:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:75:13: This simp argument is unused:
+  ha2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:75:28: This simp argument is unused:
+  ha3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:75:43: This simp argument is unused:
+  ha4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:75:58: This simp argument is unused:
+  ha5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:75:73: This simp argument is unused:
+  ha6
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:75:88: This simp argument is unused:
+  ha7
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:110:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:110:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:110:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:111:13: This simp argument is unused:
+  ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:111:28: This simp argument is unused:
+  ha1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, hl1, ho1, ha2, hl2, ho2, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:111:43: This simp argument is unused:
+  ha2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, hl2, ho2, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:111:58: This simp argument is unused:
+  ha4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:111:73: This simp argument is unused:
+  ha5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha4, hl4, ho4, hl5, ho5, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:111:88: This simp argument is unused:
+  ha6
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha4, hl4, ho4, ha5, hl5, ho5, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:111:103: This simp argument is unused:
+  ha7
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:149:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:149:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:149:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:13: This simp argument is unused:
+  ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6,
+    ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:28: This simp argument is unused:
+  ha1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6,
+    ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:43: This simp argument is unused:
+  ha2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6,
+    ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:58: This simp argument is unused:
+  ha3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6,
+    ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:73: This simp argument is unused:
+  ha4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, hl4, ho4, ha5, hl5, ho5, ha6, hl6, ho6,
+    ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:88: This simp argument is unused:
+  ha5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, hl5, ho5, ha6, hl6, ho6,
+    ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:103: This simp argument is unused:
+  ha6
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, hl6, ho6,
+    ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:150:118: This simp argument is unused:
+  ha7
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5, ha6, hl6,
+    ho6, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:182:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:182:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:182:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:183:13: This simp argument is unused:
+  ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:183:28: This simp argument is unused:
+  ha1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:183:43: This simp argument is unused:
+  ha2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, hl2, ho2, ha3, hl3, ho3, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:183:58: This simp argument is unused:
+  ha3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, hl3, ho3, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:183:73: This simp argument is unused:
+  ha6
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:183:88: This simp argument is unused:
+  ha7
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha6, hl6, ho6, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:215:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:215:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:215:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:216:13: This simp argument is unused:
+  ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl0, ho0, ha1, hl1, ho1, ha3, hl3, ho3, ha4, hl4, ho4, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:216:28: This simp argument is unused:
+  ha1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, hl1, ho1, ha3, hl3, ho3, ha4, hl4, ho4, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:216:43: This simp argument is unused:
+  ha3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, hl3, ho3, ha4, hl4, ho4, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:216:58: This simp argument is unused:
+  ha4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha3, hl3, ho3, hl4, ho4, ha6, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:216:73: This simp argument is unused:
+  ha6
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha3, hl3, ho3, ha4, hl4, ho4, hl6, ho6, ha7, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:216:88: This simp argument is unused:
+  ha7
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha3, hl3, ho3, ha4, hl4, ho4, ha6, hl6, ho6, hl7, ho7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:248:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:248:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:248:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:249:13: This simp argument is unused:
+  ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:249:28: This simp argument is unused:
+  ha1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:249:43: This simp argument is unused:
+  ha2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:249:58: This simp argument is unused:
+  ha3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:249:73: This simp argument is unused:
+  ha4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:249:88: This simp argument is unused:
+  ha5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:281:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:281:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:281:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:282:13: This simp argument is unused:
+  ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:282:28: This simp argument is unused:
+  ha1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:282:43: This simp argument is unused:
+  ha2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:282:58: This simp argument is unused:
+  ha3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, hl3, ho3, ha4, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:282:73: This simp argument is unused:
+  ha4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, hl4, ho4, ha5, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:282:88: This simp argument is unused:
+  ha5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ha0, hl0, ho0, ha1, hl1, ho1, ha2, hl2, ho2, ha3, hl3, ho3, ha4, hl4, ho4, hl5, ho5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:320:90: This simp argument is unused:
+  ite_eq_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_right,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:320:103: This simp argument is unused:
+  ite_eq_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    List.append_nil, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RigidGHZ/Supplement/Periodic/LatinEnumerationOutput.lean:320:134: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.flatMap_nil, hc0, hc1, hc2, hc3, hc4, hc5, hc6, hc7, ite_eq_left,
+    ite_eq_right, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [4065/4171] Replayed RigidGHZ.Supplement.ThresholdArithmetic
+warning: RigidGHZ/Supplement/ThresholdArithmetic.lean:13:47: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4066/4171] Replayed RigidGHZ.Supplement.BoundedHelpers
+warning: RigidGHZ/Supplement/BoundedHelpers.lean:20:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: RigidGHZ/Supplement/BoundedHelpers.lean:70:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [4075/4171] Replayed RigidGHZ.Finite.Seeds.A11
+warning: RigidGHZ/Finite/Seeds/A11.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4081/4171] Replayed RigidGHZ.Finite.Seeds.A13
+warning: RigidGHZ/Finite/Seeds/A13.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4087/4171] Replayed RigidGHZ.Finite.Seeds.A17
+warning: RigidGHZ/Finite/Seeds/A17.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4096/4171] Replayed RigidGHZ.Finite.Seeds.A19
+warning: RigidGHZ/Finite/Seeds/A19.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4109/4171] Replayed RigidGHZ.Finite.Seeds.A23
+warning: RigidGHZ/Finite/Seeds/A23.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4167/4310] Replayed RigidGHZ.Finite.Seeds.A29
+warning: RigidGHZ/Finite/Seeds/A29.lean:22:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4246/4310] Replayed RigidGHZ.Finite.Seeds.A37
+warning: RigidGHZ/Finite/Seeds/A37.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4283/4310] Replayed RigidGHZ.Finite.Seeds.A31
+warning: RigidGHZ/Finite/Seeds/A31.lean:22:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4290/4310] Replayed RigidGHZ.Finite.Seeds.A41
+warning: RigidGHZ/Finite/Seeds/A41.lean:21:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [4301/4310] Replayed RigidGHZ.Finite.Seeds.A43
+warning: RigidGHZ/Finite/Seeds/A43.lean:15:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ℹ [4304/4310] Built RigidGHZ.Finite.AxiomAudit (1.8s)
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.thirteen_rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.six_vertex_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.nine_vertex_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.balanced_tripartite_three_unique: [propext, Classical.choice, Quot.sound]
+ℹ [4309/4310] Replayed RigidGHZ.Finite.Seeds.AxiomAudit
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Supplement.Affine.seed3: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Supplement.Affine.seed5: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Supplement.Affine.seed7: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U12.rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U15.rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U18.rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U21.rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U24.rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U12.max_pair: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U15.max_pair: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U18.max_pair: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U21.max_pair: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.U24.max_pair: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A11.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A13.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A17.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A19.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A23.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A29.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A31.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A37.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A41.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A43.seed: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/Seeds/AxiomAudit.lean:21:0: RigidGHZ.Finite.Seeds.A47.seed: [propext, Classical.choice, Quot.sound]
+ℹ [4310/4310] Built RigidGHZ.AxiomAudit (2.2s)
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.nine_vertex_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.six_vertex_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.tripartite_three_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.tripartite_three_unique: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.ghz_growth_quantitative: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.ghz_growth: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.joint_binary_state_normalized: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.postselectedState_support_iff_isRigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.equal_magnitude_phase_correction: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.ghz_schmidt_decomposition: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.ghz_schmidt_on_subset: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimal_binary_success_probability: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimal_binary_success_attained: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.six_at_every_size: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.six_general: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Affine.eight_odd: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.eleven_bounded: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.ten_bounded: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.latin_bounded: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Thresholds.ten_threshold_sharp: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Thresholds.balanced_eight: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Thresholds.balanced_ten: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Thresholds.balanced_twelve: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Thresholds.unrestricted_twelve: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.LinearThresholds.linear_thresholds: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.Seeds.U12.witness: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.Seeds.U15.witness: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.Seeds.U18.witness: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.Seeds.U21.witness: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.Seeds.U24.witness: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Growth.balanced_growth: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Growth.balanced_growth_integer: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Growth.prescribed_dimension: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.unrestricted_harmonic_shadow: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.balanced_partite_harmonic_bound: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.unrestricted_floor_bound: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.balanced_partite_floor_bound: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.unrestricted_log_bound: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.balanced_partite_log_bound: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.prune_dead_edges: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.matchingCore_balanced: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.EdgeColoring.rigid_proper_coloring_unique: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.support_product: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Selector.exposed_selector_isRigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Growth.prescribed_dimension_at_least: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Growth.prescribedSize_isBigO: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Growth.prescribed_sources_isBigO: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.rigid_dimension_le_choose: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.balanced_dimension_le_power: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.balanced_three_upper: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.beta_log_error: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.beta_equivalent_log: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.unrestricted_envelope_equivalent: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.balanced_envelope_equivalent: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.attainable_dimension_littleO: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.UpperBounds.path_resource_lower: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.single_edge_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.two_edge_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.balanced_two_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.thirteen_relabel_eq_algebraicGraph: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.algebraic_rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.sumClass_card: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.sumClass_perfectMatching_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.sumClass_zero_eq_affineLines: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.sumClass_zero_perfect_iff_parallel: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.sumClass_nonzero_eq_translates: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.nonzero_sum_difference_set: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.nonzero_translates_disjoint_iff: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.translates_perfect_iff_vector_coset: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.sumClass_rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.discreteThings2024_rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.thirteen_not_isomorphic_discreteThings2024: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.algebraic_not_isomorphic_discreteThings2024: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.FivePair.observation: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Finite.FivePair.observation_on_five: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.RectangleAsymptotics.rectangular_asymptotic_constants: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.RectangleAsymptotics.rectangular_sequence_with_support_limit: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.RectangleAsymptotics.rectangular_sequence_support_one: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.RectangleAsymptotics.rectangular_sequence_with_strict_support: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.uniform_binary_success: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimalProbability_eq_success: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimalProbability_log_asymptotic: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.retained_network: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.retainedDimension_theta: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.retained_source_count_theta: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.retained_success_log: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.triplet_retained_success_log: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.multipleAccepted_iff: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.multiple_emission_rejected: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.accepted_multiple_amplitude: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.identical_multiple_success: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.independentWeight_expected_card: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.expectedEmissions_optimal: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.expectedPhotons_optimal: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.flaggedDetectionProbability_eq: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimal_3_12_rounding: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimal_13_12_rounding: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimal_39_12_rounding: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimal_3_13_rounding: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.SourceModel.optimal_6_13_rounding: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.grafting: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.grafting_balanced: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.BoundedRigid.semigroup: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.doubling: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Marked.recovery: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Marked.signed_recovery: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Affine.Seed.cyclic_lift: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Affine.Seed.linear_large: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Affine.Seed.linear_three: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Affine.Seed.linear_two: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Affine.Seed.linear_retained: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Affine.normalize_counterexample: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.SixCyclic.graph_locality: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Scheme.perfectMatching_count_eq_trace: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.MatrixHeight.strict_trace: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.MatrixHeight.exceptional_trace: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.perfectMatching_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.perfectMatching_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.perfectMatching_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.configuration_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.transition_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.state_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.size_distribution: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.candidate_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.outgoing_vertex_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Eleven.local_configuration_size: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.configuration_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.transition_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.state_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.size_distribution: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.candidate_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.outgoing_vertex_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Ten.local_configuration_size: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.configuration_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.transition_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.state_count: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.size_distribution: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.weightedArcs_support: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.weightedArcs_counts: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/AxiomAudit.lean:14:0: RigidGHZ.Supplement.Periodic.Latin.every_configuration_size: [propext, Classical.choice, Quot.sound]
+Build completed successfully (4310 jobs).

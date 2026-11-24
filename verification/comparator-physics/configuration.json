@@ -1,0 +1,16 @@
+{
+  "challenge_module": "PhysicsChallenge",
+  "solution_module": "PhysicsSolution",
+  "theorem_names": [
+    "RigidGHZ.SourceModel.ghz_growth_quantitative",
+    "RigidGHZ.SourceModel.ghz_growth",
+    "RigidGHZ.SourceModel.joint_binary_state_normalized",
+    "RigidGHZ.SourceModel.postselectedState_support_iff_isRigid",
+    "RigidGHZ.SourceModel.equal_magnitude_phase_correction",
+    "RigidGHZ.SourceModel.optimal_binary_success_probability",
+    "RigidGHZ.SourceModel.optimal_binary_success_attained"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

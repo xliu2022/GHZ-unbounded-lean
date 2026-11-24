@@ -1,0 +1,968 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[skip=0.42\baselineskip plus 2pt,indent=0pt]{parskip}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,longtable}
+\usepackage{aliascnt,capt-of}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage[nameinlink,noabbrev,capitalize]{cleveref}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}\aliascntresetthe{lemma}
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}\aliascntresetthe{proposition}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}\aliascntresetthe{corollary}
+\newaliascnt{claim}{theorem}
+\newtheorem{claim}[claim]{Claim}\aliascntresetthe{claim}
+\crefname{claim}{Claim}{Claims}\Crefname{claim}{Claim}{Claims}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\setcounter{tocdepth}{1}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\l@section}{1.5em}{2.4em}{}{}
+\makeatother
+\hypersetup{pdftitle={Supplemental Material for Unbounded GHZ dimension from fixed-order multiphoton sources},pdfauthor={Heng Li and Xizhi Liu}}
+\title{\large Supplemental Material for\\[2pt]\Large\bfseries Unbounded GHZ dimension from fixed-order multiphoton sources}
+\author{
+Heng~Li\thanks{School of Mathematics, Shandong University, Jinan, China, and Extremal Combinatorics and Probability Group (ECOPRO), Institute for Basic Science (IBS), Daejeon, South Korea. \href{mailto:heng.li@sdu.edu.cn}{\nolinkurl{heng.li@sdu.edu.cn}}.}
+\and
+Xizhi~Liu\thanks{School of Mathematical Sciences, University of Science and Technology of China, Hefei, China. \href{mailto:liuxizhi@ustc.edu.cn}{\nolinkurl{liuxizhi@ustc.edu.cn}}.}
+}
+\date{}
+\begin{document}
+\maketitle
+
+A hypergraph is $d$-rigid if its edge set is the disjoint union of $d$ perfect matchings and it has no other perfect matching. Write $m$ for the number of edges in each perfect matching and $n=rm$ for the number of output paths. The largest possible $d$ is denoted by $f_r(n)$ for simple $r$-graphs, by $g_r(m)$ for balanced $r$-partite $r$-graphs, and by $\ell_3(m)$ for linear balanced tripartite $3$-graphs. In a linear hypergraph, any two distinct edges meet in at most one vertex. We write $[q]\coloneqq\{1,\ldots,q\}$.
+
+We construct finite networks and give conditions under which grafting and cyclic lifts preserve rigidity. For the target dimensions listed in \cref{finite:sec:thresholds}, we give thresholds $m_0$ such that the stated dimension is attainable at every matching size $m\ge m_0$. The electronic data include the source lists and programs for exporting and checking them.
+
+\tableofcontents
+
+\section{Elementary constructions at every part size}\label{finite:sec:elementary}
+The three incidence classes give $\ell_3(m)\le g_3(m)\le f_3(3m)$. A $t$-rigid $r$-graph on $rm$ vertices is $t$-regular and has $tm$ edges.
+The union of any nonempty subfamily of the prescribed matchings has precisely those perfect matchings.
+
+\begin{lemma}[Two choices on a cycle]\label{finite:lem:two-choice}
+Let $\tau$ be a permutation consisting of a single cycle on a finite set $X$. If a permutation
+$\rho$ satisfies $\rho(x)\in\{x,\tau(x)\}$ for every $x\in X$, then
+$\rho$ is either the identity or $\tau$.
+\end{lemma}
+\begin{proof}
+If $\rho$ moves $x$, then $\rho(x)=\tau(x)$. Injectivity forces $\rho$
+to move $\tau(x)$ as well. Following the cycle gives $\rho=\tau$.
+If $\rho$ moves no point, it is the identity.
+\end{proof}
+
+\begin{proposition}[Doubling the number of perfect matchings]\label{finite:prop:dimension-doubling}
+For $r\ge2$ and $m\ge2$, we have $g_{r+1}(m)\ge2g_r(m)$.
+\end{proposition}
+\begin{proof}
+Take a balanced $r$-partite $r$-graph that is $t$-rigid with a distinguished part $X$, and let $Y$ be a new copy of $X$. Let $\tau$ consist of a single cycle on $X$. For each edge $e$, let $x(e)$ be its vertex in $X$ and extend $e$ by either $x(e)_Y$ or $\tau(x(e))_Y$. Each prescribed perfect matching has two lifts. One uses $x(e)_Y$ for every edge of the matching, and the other uses $\tau(x(e))_Y$ for every edge. The lifted edges are distinct because projection recovers $e$ and the new vertex determines the choice. Conversely, a perfect matching in the lift covers each vertex in every original part exactly once. Its projected edges therefore form a perfect matching of the base hypergraph. The choices in $Y$ satisfy \cref{finite:lem:two-choice}, so each base matching has exactly the two prescribed lifts.
+\end{proof}
+
+\begin{corollary}\label{finite:four-baseline}
+For every $m\ge2$, $g_3(m)\ge4$.
+More generally, $g_r(m)\ge2^{r-1}$ for $r\ge2$ and $m\ge2$.
+\end{corollary}
+\begin{proof}
+In two parts indexed by $\mathbb Z_m$, the edges $(a,a)$ and $(a,a+1)$, for $a\in\mathbb Z_m$, form a cycle with exactly two perfect matchings by \cref{finite:lem:two-choice}.
+Apply \cref{finite:prop:dimension-doubling} repeatedly.
+\end{proof}
+
+\begin{theorem}\label{finite:thm:six}
+For every $m\ge3$, there is a balanced tripartite $6$-rigid $3$-graph with part
+size $m$, $6m$ edges, and maximum pair codegree at most two. Consequently
+\[
+ g_3(m)\ge6\quad(m\ge3),\qquad
+ g_r(m)\ge3\cdot2^{r-2}\quad(r\ge3, m\ge3).
+\]
+\end{theorem}
+\begin{proof}
+Index each of the three parts by $\mathbb Z_m$. If $m$ is odd, put
+$\tau(i)=i+1$. If $m$ is even, let $\tau$ be the cycle $(0,1,\ldots,m-1)$
+with the entries $1$ and $2$ interchanged.
+For $c\in\{0,1\}$, define the six perfect matchings
+\begin{align*}
+ M_{-,c}&=\{(i,i-1,\tau^c(i)):i\in\mathbb Z_m\},\\
+ M_{0,c}&=\{(i,i,\tau^c(i-1)):i\in\mathbb Z_m\},\\
+ M_{+,c}&=\{(i,i+1,\tau^c(i+1)):i\in\mathbb Z_m\}.
+\end{align*}
+For each offset $-1,0,1$ and each $c$, the second and third coordinates are permutations of $\mathbb Z_m$. In the row with first coordinate $i$, the three possible second coordinates are distinct since $m\ge3$. For each of them the two possible third coordinates differ because $\tau$ has no fixed point. Thus the six perfect matchings are pairwise edge-disjoint.
+
+Let $P$ be any perfect matching. Its projection onto the first two parts
+is a permutation $\sigma$ satisfying $\sigma(i)\in\{i-1,i,i+1\}$.
+Unless $\sigma$ is the full forward or backward cycle, each nontrivial cycle of $\sigma$ is an adjacent transposition. Indeed, a cycle of length at least three in the underlying cycle graph must visit every vertex.
+
+With $c=0$, the third coordinate in row $i$ is $i+1$, $i$, or $i-1$ for the forward cycle, the backward cycle, or the identity, respectively. In each case the third coordinate gives a permutation of $\mathbb Z_m$. Choosing between its value $z$ and $\tau(z)$ in each row must again give a permutation. By \cref{finite:lem:two-choice}, all rows use the same $c$.
+
+It remains to exclude an adjacent transposition $i\leftrightarrow i+1$. The two corresponding edges have the same third coordinate $i+1$ at $c=0$, so they must use both $i+1$ and $\tau(i+1)$. A loop in row $i+2$ would require one of those same two vertices. Row $i+2$ cannot be paired with row $i+1$, so it must be paired with row $i+3$. Continuing around the cycle forces alternating adjacent transpositions. This is impossible for odd $m$. For even $m$, the common third coordinates $i+1$ of the transposed pairs form either the set $E$ of even residues or the set $O$ of odd residues. The pairs $\{z,\tau(z)\}$ for these coordinates cover the third part exactly once only if $\tau(E)=O$ or $\tau(O)=E$. Neither equality holds, since $\tau(0)=2$ and $\tau$ is a permutation. Thus $P$ is one of the six prescribed perfect matchings.
+
+A pair in the first and second parts determines the row and the offset, leaving only the two choices for $c$. For a fixed first coordinate, the three possible third coordinates at $c=0$ are distinct. To obtain a given third coordinate $z$, the value at $c=0$ must be $z$ or $\tau^{-1}(z)$, so a first--third pair lies in at most two edges. The three values at $c=0$ are also distinct for a fixed second coordinate, giving the same bound for second--third pairs. Pairs within one part have codegree zero. The remaining assertions follow by doubling.
+\end{proof}
+
+For every edge $(i,j,k)$, the path indices satisfy $j-i\in\{-1,0,1\}$ and $k-i\in\{-2,-1,0,1,2,3\}$ modulo $m$. In fact $i,j,k$ lie in a cyclic interval of at most four consecutive residues, by the three formulas for the edges and the fact that $\tau(x)-x\in\{-1,1,2\}$.
+
+Complementary pairs of triples give $f_3(6)=10$. The article proves $f_3(9)=13$ and $g_3(3)=6$. At $m=4$, \cref{finite:thm:six} and the article's exchange bound give $6\le g_3(4)\le8$. For two vertices per part, complementary pairs of transversal edges give $g_r(2)=2^{r-1}$.
+
+\subsection{Eight perfect matchings over \texorpdfstring{$\mathbb Z_m$}{Z/mZ}}\label{finite:subsec:modular-eight}
+\begin{proposition}\label{finite:prop:eight-coprime}
+If $m\ge5$ and $\gcd(m,6)=1$, then $g_3(m)\ge8$.
+\end{proposition}
+\begin{proof}
+Work modulo $m$. For $h\in\{0,1\}$ and $s\in\{0,1,2,3\}$, put
+\[
+ M_{h,s}=\{(a,a+s,h-2a-s):a\in\mathbb Z_m\}.
+\]
+Each $M_{h,s}$ is a perfect matching, and the matchings are pairwise edge-disjoint. Sum the three vertex coordinates over all edges of an arbitrary perfect matching. Since $m$ is odd, the sum in each part is zero modulo $m$. Each edge contributes $h$, so the number $u$ of edges with $h=1$ satisfies $u\equiv0\pmod m$. As $0\le u\le m$, all edges have the same $h$.
+
+Fix a perfect matching with common edge sum $h$ and let $\delta_a\in\{0,1,2,3\}$ be its shift in row $a$. Both maps $a\mapsto a+\delta_a$ and $a\mapsto 2a+\delta_a$ are permutations of $\mathbb Z_m$. Summing the values of the first map gives $\sum_a\delta_a\equiv0\pmod m$. Since $\gcd(m,6)=1$, the formula for $\sum_{a=0}^{m-1}a^2$ gives $\sum_a a^2\equiv0\pmod m$. Summing the squares of the values of each map gives
+\[
+ 2\sum_a a\delta_a+\sum_a\delta_a^2\equiv0\pmod m,\qquad
+ 4\sum_a a\delta_a+\sum_a\delta_a^2\equiv0\pmod m.
+\]
+Subtracting the first congruence from the second gives $2\sum_a a\delta_a\equiv0\pmod m$, so the first congruence gives $\sum_a\delta_a^2\equiv0\pmod m$. Let $n_s$ count the rows with shift $s$. Using $\sum_s n_s=m$, $\sum_s s n_s\equiv0$ and $\sum_s s^2 n_s\equiv0\pmod m$, we obtain
+\[
+ (n_0,n_1,n_2)\equiv n_3(-1,3,-3)\pmod m.
+\]
+If $n_3\not\equiv0\pmod m$, all four counts lie between $1$ and $m-1$, since $3$ is invertible modulo $m$. Since $n_0\equiv-n_3$ and $n_1\equiv-n_2$ modulo $m$, each pair sums to $m$, contradicting $\sum_s n_s=m$. Thus $n_3\equiv0\pmod m$, and every $n_s$ is a multiple of $m$. Exactly one equals $m$, so the shift is constant.
+\end{proof}
+
+\section{Periodic constructions and their transfer matrices}\label{finite:sec:periodic}
+For each of the next three constructions we compute a transfer matrix $D$. At period $q$, the number of perfect matchings is $\operatorname{tr}(D^q)$, the total weight of length-$q$ closed walks in the associated digraph with layer 0 distinguished.
+
+\begin{lemma}[Transfer identity]\label{finite:lem:transfer}
+Let $F$ be a finite simple $r$-graph. For each edge $e$, choose a proper
+subset $O_e\subsetneq e$. For a positive integer $q$, replace $e$ by
+\[
+ e_j=\{(v,j):v\in e\setminus O_e\}\cup
+      \{(v,j+1):v\in O_e\},\qquad j\in\mathbb Z_q.
+\]
+Put $U=\bigcup_e O_e$. A \emph{local configuration} is a subset $\mathcal A\subseteq E(F)$ with the following properties. For $e\in\mathcal A$, the sets $e\setminus O_e$ are pairwise disjoint, as are the sets $O_e$, and
+\[
+ S=V(F)\setminus\bigcup_{e\in\mathcal A}(e\setminus O_e)\subseteq U.
+\]
+The input $S$ consists of the vertices to be covered from the preceding layer. The output $T\coloneqq\bigcup_{e\in\mathcal A}O_e$ consists of the vertices covered in the next layer. Let $D_{S,T}$ count the configurations with input $S$ and output $T$. The number of perfect matchings in the $q$-periodic construction is $\operatorname{tr}(D^q)$.
+\end{lemma}
+\begin{proof}
+Projecting a lifted edge onto $F$ recovers its base edge $e$. Choose $v\in e\setminus O_e$. Its copy $(v,j)$ in the lifted edge identifies the layer of origin $j$. Partition a perfect matching by its layers of origin. The edges originating in layer $j$ give a local configuration with input $S_j$ and output $T_j$. The vertices of layer $j$ left uncovered by the local sets must be covered from layer $j-1$, so $T_{j-1}=S_j$. Conversely, these equalities ensure that every vertex is covered exactly once. A perfect matching thus corresponds to a closed walk of length $q$ starting at the state of layer 0, with each transition labeled by its local configuration. The trace of $D^q$ counts these walks with their multiplicities.
+\end{proof}
+
+To enumerate the local configurations, number the vertices of $F$ from $1$ to $|V(F)|$ and encode a subset $S$ by the integer $\sum_{v\in S}2^{v-1}$, its bit mask. Examine each $k$-element subset of the base edges for $0\le k\le\lfloor(|V(F)|+|U|)/r\rfloor$. Discard a subset if two local sets intersect or two outgoing sets intersect. For the others, compute the missing set $S$ and outgoing set $T$ as in \cref{finite:lem:transfer}. If $S\subseteq U$, increase $D_{S,T}$ by one. The size bound holds because a valid configuration of $k$ edges uses $rk$ distinct positions among the $|V(F)|$ local and $|U|$ outgoing positions. This enumerates each valid configuration exactly once.
+
+\begin{lemma}[Height certificates]\label{finite:lem:transfer-height}
+Suppose the weighted digraph with adjacency matrix $D$ has $d$ loops, each of weight one. If every nonloop arc strictly increases an integer height, then $\operatorname{tr}(D^q)=d$ for all $q\ge1$. Suppose instead that all nonloop arcs strictly increase height except $x\to y$ and $y\to x$ at the same height, with weights $a,b$. If neither $x$ nor $y$ has a loop, then
+\[
+ \operatorname{tr}(D^q)=d+\mathbf1_{2\mid q}\,2(ab)^{q/2}.
+\]
+\end{lemma}
+\begin{proof}
+Height never decreases along an arc, so every arc of a closed walk joins vertices of the same height. The walk stays at a vertex with a loop of weight one or, in the second case, follows the two-cycle. Such a walk on the two-cycle exists only for even $q$, has two choices of starting vertex, and has weight $(ab)^{q/2}$.
+\end{proof}
+
+\subsection{A Latin square with eight transversals}\label{finite:subsec:latin}
+Up to relabeling and permutation of the row, column, and symbol coordinates, Egan and Wanless~\cite{EganWanless2012} found four Latin squares of order 8 with exactly 8 transversals that partition the cells. For the cyclic lift we take the last square $L$ in the file \texttt{LS8alphan} from Wanless's data set~\cite{WanlessTransversalData}. Index the rows and columns by $0,\ldots,7$ and identify the symbols $a,\ldots,h$ with $0,\ldots,7$. Each row of the right-hand array gives one transversal of $L$. Its entries are the columns $p(a)$ selected in rows $a=0,\ldots,7$, in that order.
+\[
+\begin{array}{@{}c@{\qquad\qquad}c@{}}
+ \text{Latin square }L & \text{Transversal permutations}\\[3pt]
+ \begin{array}{@{}*{8}{c}@{}}
+h&a&c&e&b&d&f&g\\
+a&h&d&c&e&b&g&f\\
+g&f&e&b&d&a&c&h\\
+f&g&b&d&a&e&h&c\\
+d&b&f&g&h&c&a&e\\
+b&e&g&f&c&h&d&a\\
+e&c&h&a&f&g&b&d\\
+c&d&a&h&g&f&e&b
+ \end{array}
+ &
+ \begin{array}{@{}*{8}{c}@{}}
+0&2&3&1&5&7&4&6\\
+1&3&2&0&4&6&5&7\\
+2&0&1&3&7&5&6&4\\
+3&1&0&2&6&4&7&5\\
+4&6&7&5&0&3&1&2\\
+5&7&6&4&1&2&0&3\\
+6&4&5&7&3&0&2&1\\
+7&5&4&6&2&1&3&0
+ \end{array}
+\end{array}
+\]
+Checking all $8!$ column permutations and retaining those with 8 distinct symbols gives exactly these eight transversals. The corresponding perfect matchings $\{(a,p(a),L(a,p(a)))\colon 0\le a\le7\}$ partition the 64 cells, so this square gives $\ell_3(8)\ge8$.
+
+For a positive period $q$, lift a cell $(a,b)$ in layer $j$ to
+\[
+ (A_{a,j},B_{b,j+\beta(a,b)},C_{L(a,b),j+\gamma(a,b)}).
+\]
+All unlisted shifts are $(0,0)$. The nonzero shifts are
+\[
+\begin{array}{c|l}
+(\beta,\gamma)&(a,b)\\\hline
+(1,0)&(0,0),(0,3),(1,0),(1,2),(2,0),(2,3),\\
+     &(3,0),(3,2),(3,3),(4,2),(4,3),\\
+     &(5,0),(5,2),(5,3),(7,0)\\
+(0,1)&(1,4),(2,2),(5,1),(7,6)
+\end{array}.
+\]
+Only $B_0,B_2,B_3$, and $C_4$ (symbol $e$) occur in outgoing sets. A lifted edge uses their next-layer copies precisely when they belong to its outgoing set. For this example we encode subsets of these four vertices with bit weights $1,2,4,8$, in the order listed. Since each vertex in the first part stays in its layer, a local configuration chooses exactly one cell in each row. Rejecting choices that repeat a local or outgoing vertex leaves 84 configurations. The weighted arcs $(S,T,D_{S,T})$ are
+\[
+\begin{array}{rrrr}
+(2,1,5)&(2,2,1)&(2,4,6)&(3,5,3)\\
+(3,6,5)&(4,1,7)&(4,4,1)&(5,5,1)\\
+(6,3,1)&(6,5,9)&(7,7,1)&(9,9,1)\\
+(9,10,13)&(9,12,2)&(11,11,1)&(11,14,4)\\
+(13,11,12)&(13,13,1)&(13,14,9)&(15,15,1)
+\end{array}.
+\]
+The eight states with a loop of weight one have masks $2,4,5,7,9,11,13,15$. Give height zero to $2,3,6,7,9,13,15$, height one to $4,5,10,11,12$, and height two to $1,14$. Height increases along every nonloop arc except $3\to6$ and $6\to3$, whose weights are 5 and 1, respectively. Neither state has a loop. Therefore
+\[
+ \operatorname{tr}(D^q)=8+\mathbf1_{2\mid q}\,2\cdot5^{q/2}.
+\]
+For odd $q$, the eight lifts of the listed transversals are pairwise edge-disjoint and exhaust the perfect matchings. Each pair of base vertices lies in at most one base edge, and the lifts of a single base edge are pairwise vertex-disjoint. Thus the lifted hypergraph is linear, giving
+\begin{equation}\label{finite:eq:latin-odd}
+ \ell_3(8q)\ge8\qquad(q\ge1\text{ odd}).
+\end{equation}
+For even $q$ the two-cycle contributes additional perfect matchings.
+
+\subsection{Eleven perfect matchings on \texorpdfstring{$9q$}{9q} vertices for every period}\label{finite:subsec:eleven-period}
+On vertices $1,\ldots,9$, take the 13 matchings listed by \texttt{discrete\_things}~\cite{DiscreteThings2024} and omit the two containing $\{1,5,6\}$ and $\{1,6,8\}$, respectively. The table specifies the lift of the remaining 11 matchings. An entry $abc^O$ assigns outgoing set $O$ to $e=\{a,b,c\}$, and an omitted superscript means $O=\varnothing$.
+\[
+\begin{array}{c|ccc}
+1&123^{3}&456&789\\
+2&128^{8}&369&457^{4}\\
+3&129&356&478\\
+4&134^{34}&279&568\\
+5&137^{3}&246^{6}&589\\
+6&145^{4}&238&679^{67}\\
+7&147^{4}&269^{26}&358^{3}\\
+8&149^{4}&268^{6}&357^{3}\\
+9&159^{9}&248&367\\
+10&167^{6}&235^{3}&489^{8}\\
+11&178^{8}&259&346^{46}
+\end{array}.
+\]
+Each row partitions the 9 vertices, so its lift is a prescribed perfect matching for every $q$. The 33 base edges are distinct. The union $U=\{2,3,4,6,7,8,9\}$ of the outgoing sets has bit mask 494. Enumerating $\sum_{k=0}^{5}\binom{33}{k}=284274$ candidates gives 333 configurations and 250 distinct transitions involving 91 states. The configuration counts at sizes $0,1,\ldots,5$ are $0,2,80,209,42,0$. The states carrying a loop of weight one have masks
+\[
+ 0,4,12,36,44,46,104,136,164,168,256.
+\]
+The first column gives the height, and the second lists the state masks at that height. All unlisted states have height zero.
+\[
+\begin{array}{c|l}
+1&0,136,384,424\\
+2&36,38,100,132,162,172,224\\
+3&40,46,104,160,164,170,232,288,416\\
+4&12,42,108,140,256,290,352\\
+5&8,32,168\\
+6&4,44,166,228,296\\
+7&128
+\end{array}.
+\]
+On each of the 239 nonloop arcs $S\to T$, the table assigns a greater height to $T$ than to $S$. The electronic certificate contains the full arc list. By \cref{finite:lem:transfer,finite:lem:transfer-height}, the 11 prescribed perfect matchings are the only ones, so
+\begin{equation}\label{finite:eq:eleven-period}
+ f_3(9q)\ge11\qquad(q\ge1).
+\end{equation}
+
+
+\subsection{Ten perfect matchings on \texorpdfstring{$6q$}{6q} vertices for odd periods}\label{finite:subsec:ten-period}
+The base is the 6-path network of Gu, Chen, and Krenn~\cite[Fig.~8]{GuChenKrenn2020}, with every triple of $[6]$ as an edge. For the lift, take the outgoing sets
+\[
+\begin{array}{c|cccccccccc}
+e&123&124&125&126&134&135&136&145&146&156\\\hline
+O_e&13&14&5&\varnothing&34&5&13&\varnothing&46&5\\[3pt]
+e&234&235&236&245&246&256&345&346&356&456\\\hline
+O_e&24&\varnothing&36&\varnothing&46&5&3&\varnothing&56&6
+\end{array}.
+\]
+The ten perfect matchings of the base hypergraph are the complementary pairs of triples. Each lifts to a prescribed perfect matching for every $q$. Here $U=[6]$. Enumerating $\sum_{k=0}^{4}\binom{20}{k}=6196$ candidates gives 140 configurations and 123 distinct transitions involving 55 states. The counts by configuration size are $1,20,73,44,2$. The ten states with a loop of weight one have masks
+\[
+ 4,5,16,26,28,36,37,40,56,57.
+\]
+The only nonloop arcs on a directed cycle are $0\to63$ and $63\to0$, of weights 2 and 1, respectively. The first column gives the height, and the second lists the state masks at that height. All unlisted states have height zero.
+\[
+\begin{array}{c|l}
+1&4,10,31,37,47,56,61,62\\
+2&13,25,32,36,41,44\\
+3&0,9,29,30,40,57,58,63\\
+4&5,12,14,15,26,42,46,52,53,60\\
+5&16,20,21,48\\
+6&45
+\end{array}.
+\]
+On every other nonloop arc, the height increases. The states with masks 0 and 63 have no loops. Consequently
+\[
+ \operatorname{tr}(D^q)=10+\mathbf1_{2\mid q}\,2\cdot2^{q/2},
+\]
+and hence
+\begin{equation}\label{finite:eq:ten-period}
+ f_3(6q)\ge10\qquad(q\ge1\text{ odd}).
+\end{equation}
+For even $q$, the two-cycle gives additional perfect matchings.
+
+\section{Grafting and maximum \texorpdfstring{$j$}{j}-degrees}\label{finite:sec:grafting}
+For $1\le j\le r$, define the \emph{maximum $j$-degree}
+\[
+ \Delta_j(H)=\max_{X\in\binom{V(H)}j}d_H(X),\qquad
+ d_H(X)=|\{e\in E(H):X\subseteq e\}|.
+\]
+Thus $\Delta_1$ is the maximum vertex degree and $\Delta_2$ is the maximum pair codegree. A $3$-graph is linear exactly when $\Delta_2\le1$.
+
+\begin{theorem}[Grafting]\label{finite:thm:graft}
+Let $H$ be a $t$-rigid $r$-graph on $rm$ vertices, and let $S$ be a
+balanced $r$-partite $t$-rigid $r$-graph with part size $q$.
+There is a $t$-rigid $r$-graph $G$ on $r(m+q-1)$ vertices satisfying
+\begin{equation}\label{finite:eq:graft-degree}
+ \Delta_j(G)\le\max\{\Delta_j(H),\Delta_j(S)\}
+ \qquad(1\le j\le r).
+\end{equation}
+If $H$ is balanced $r$-partite, $G$ can also be chosen balanced
+$r$-partite. Consequently
+\begin{align}
+ f_r(r(m+q-1))&\ge\min\{f_r(rm),g_r(q)\},\label{finite:eq:graft-f}\\
+ g_r(m+q-1)&\ge\min\{g_r(m),g_r(q)\}.
+ \label{finite:eq:graft-g}
+\end{align}
+\end{theorem}
+\begin{proof}
+Write $M_1,\ldots,M_t$ for the prescribed perfect matchings of $H$, and $N_1,\ldots,N_t$ for those of $S$. Let $A_1,\ldots,A_r$ be the parts of $S$. Fix $a_*\in A_1$ and let $e_i$ be the unique edge of $N_i$ through $a_*$. Choose any $r$ distinct vertices $v_1,\ldots,v_r$ of $H$ and replace each $v_j$ by the part $A_j$ of $S$. In an edge of $M_i$, replace each occurrence of $v_j$ by the unique vertex of $e_i\cap A_j$. Call the images of the edges of $H$ the \emph{inherited edges}. Add the edges of $N_i\setminus\{e_i\}$ as \emph{internal edges} of color $i$. Together with the inherited edges from $M_i$, they cover every vertex exactly once and thus form a perfect matching.
+
+Contracting each $A_j$ to $v_j$ recovers the original edge of $H$ from each inherited edge, so distinct edges of $H$ have distinct images. Every internal edge meets $A_1\setminus\{a_*\}$, and no inherited edge does. The internal edges are distinct because the $N_i$ are edge-disjoint in the simple hypergraph $S$. Thus $G$ is simple and its prescribed perfect matchings are pairwise edge-disjoint.
+
+Let $P$ be any perfect matching of $G$. Only internal edges can cover the $q-1$ vertices of $A_1\setminus\{a_*\}$, and each internal edge covers one of them. The $q-1$ internal edges of $P$ therefore leave exactly one vertex in each $A_j$ for the inherited edges. Contracting those inherited edges gives a perfect matching of $H$, necessarily $M_i$ for some $i$. Together, the inherited edges of $P$ cover precisely the vertices of $e_i$ in $V(S)$. Adjoining $e_i$ to the internal edges of $P$ gives a perfect matching of $S$ containing $e_i$, which must be $N_i$. Hence $P$ is the prescribed perfect matching of color $i$.
+
+If $H$ is balanced $r$-partite, choose $v_j$ in its $j$th part to preserve the given partition. The new $j$th part consists of the old part with $v_j$ replaced by $A_j$ and has size $m+q-1$.
+
+To prove \cref{finite:eq:graft-degree}, fix a $j$-element set $X\subseteq V(G)$ with $j\ge1$. If $X$ contains a retained vertex of $H$, only inherited edges can contain $X$. If $X$ also contains two vertices of the same $A_i$, no such edge exists. Otherwise contraction sends $X$ to a $j$-element subset of $V(H)$ and sends distinct inherited edges containing $X$ to distinct edges of $H$ containing its image. Thus $d_G(X)\le\Delta_j(H)$.
+
+Suppose instead that $X\subseteq V(S)$. An inherited edge of color $i$ can contain $X$ only if $X\subseteq e_i$, and at most one inherited edge of that color can contain the nonempty set $X$. The internal edges containing $X$ are exactly the edges of $S$ containing $X$, except for the deleted edges $e_i$. Each such deleted edge can therefore be replaced by at most one inherited edge containing $X$. Summing over $i$ gives $d_G(X)\le d_S(X)\le\Delta_j(S)$. To obtain \cref{finite:eq:graft-f,finite:eq:graft-g}, let $d_1,d_2$ be the two matching counts and retain $\min\{d_1,d_2\}$ prescribed matchings in each hypergraph before grafting.
+\end{proof}
+
+If $H$ and $S$ are linear, \cref{finite:eq:graft-degree} shows that their graft $G$ is linear.
+
+\begin{corollary}[Part sizes under repeated grafting]\label{finite:cor:graft-semigroup}
+Let $S_1,\ldots,S_s$ be balanced $r$-partite $t$-rigid hypergraphs of part sizes $q_1,\ldots,q_s$, with $s\ge1$. Repeated grafting produces a balanced $r$-partite $t$-rigid hypergraph of part size $1+\sum_{i=1}^s(q_i-1)$. Grafting these hypergraphs onto an unrestricted $t$-rigid $r$-graph increases its matching size by $\sum_{i=1}^s(q_i-1)$. In both cases, grafting preserves a common upper bound on each $\Delta_j$.
+\end{corollary}
+\begin{proof}
+Starting with $S_1$ and grafting $S_2,\ldots,S_s$ gives part size $q_1+\sum_{i=2}^s(q_i-1)$. For the second assertion, start with the given unrestricted hypergraph and graft $S_1,\ldots,S_s$. The degree bounds follow at each step from \cref{finite:eq:graft-degree}.
+\end{proof}
+\section{Cyclic lifts of finite affine constructions}\label{finite:sec:modular-lifts}
+\subsection{The finite seed hypothesis}\label{finite:subsec:affine-seeds}
+Let $m$ be odd, and assume that $\lambda$ and $\lambda+1$ are units
+modulo $m$. For $S\subseteq\mathbb Z_m$, consider the edge sets
+\begin{equation}\label{finite:eq:single-sum}
+ P_s=\{(a,\lambda a+s,-(\lambda+1)a-s):a\in\mathbb Z_m\},
+ \qquad s\in S.
+\end{equation}
+They are pairwise edge-disjoint perfect matchings and their union is
+linear because any two coordinates determine the third from their zero sum.
+The seed hypothesis used below is that the $P_s$, $s\in S$, are the
+only perfect matchings of their union.
+
+We use the following seeds.
+\begin{center}\small
+\begin{tabular}{rrrl}
+\toprule
+$m$&$\lambda$&$|S|$&$S$\\\midrule
+3&1&3&$\{0,1,2\}$\\
+5&1&4&$\{0,1,2,3\}$\\
+7&1&4&$\{0,1,2,3\}$\\
+11&2&5&$\{0,1,2,3,5\}$\\
+13&2&6&$\{0,1,2,4,5,8\}$\\
+17&2&5&$\{0,1,2,4,5\}$\\
+19&3&6&$\{0,1,3,12,14,15\}$\\
+23&2&6&$\{0,1,2,9,10,11\}$\\
+29&8&6&$\{0,1,2,7,20,21\}$\\
+31&4&6&$\{0,1,3,16,21,28\}$\\
+37&1&5&$\{0,1,2,5,21\}$\\
+41&1&5&$\{0,1,2,5,16\}$\\
+43&1&5&$\{0,1,2,5,38\}$\\
+47&1&5&$\{0,1,2,11,23\}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Restricting the construction in \cref{finite:prop:eight-coprime} to $h=0$ proves the seed condition for $m=5,7$. For $m=3$, the map $a\mapsto a+b(a)$ is a permutation exactly when the permutation $b$ of $\mathbb Z_3$ is a translation. For each remaining seed, exhaustive enumeration gives exactly the prescribed matchings $P_s$, $s\in S$.
+
+For each $(a,s)\in\mathbb Z_m\times S$, form the row of the exact-cover matrix whose three nonzero entries are in columns $A_a$, $B_{\lambda a+s}$, and $C_{(\lambda+1)a+s}$. The third part is indexed by the negative of its base coordinate. An exact cover chooses one row for each $a$ and uses every second and third label once. Thus the covers are precisely the perfect matchings of \cref{finite:eq:single-sum}. Following Knuth's Algorithm~X~\cite{KnuthDancingLinks}, we choose an uncovered column and try each compatible row containing it, removing the three columns of the chosen row before recursing. The search enumerates each exact cover once. In every cover it finds, the selected rows have a common shift $s$.
+
+The Python enumeration and an independent C++ implementation find the same perfect matchings for the seven values of $m$ below. The C++ implementation branches on an uncovered column with the fewest compatible rows. The table gives the number of recursive calls for each implementation.
+\[
+\begin{array}{@{}l*{7}{r}@{}}
+ m & 11 & 13 & 17 & 19 & 23 & 29 & 31\\
+ \midrule
+ \text{Python} & 268 & 2\,058 & 2\,238 & 15\,135 & 42\,187 & 649\,208 & 1\,517\,532\\
+ \text{C++} & 216 & 1\,468 & 1\,557 & 10\,617 & 29\,885 & 415\,497 & 949\,024
+\end{array}
+\]
+The electronic data include the enumeration programs and results for the four larger seeds, with $m=37,41,43,47$.
+
+\begin{lemma}[Doubling a constant-sum seed]\label{finite:lem:double-sum}
+Let $m\ge3$ be odd and let $\delta$ be a unit modulo $m$. Suppose the
+matchings $P_s$ in \cref{finite:eq:single-sum} are the only perfect
+matchings of their union. Then the sets
+\[
+ N_{h,s}=\{(a,\lambda a+s,\delta h-(\lambda+1)a-s):a\in\mathbb Z_m\},
+ \quad h\in\{0,1\},\ s\in S,
+\]
+are perfect matchings. Their union is $2|S|$-rigid and has maximum
+pair codegree at most two.
+\end{lemma}
+\begin{proof}
+For fixed $h,s$, the last two coordinates are permutations of $\mathbb Z_m$ because $\lambda$ and $\lambda+1$ are units. An edge determines $s$ from its first two coordinates and $h$ from its coordinate sum, so the matchings are edge-disjoint. Sum the three vertex coordinates over all edges of any perfect matching. The sum in each part is zero modulo $m$ since $m$ is odd. Thus $\delta u\equiv0\pmod m$, where $u$ counts the edges with $h=1$. Since $\delta$ is a unit and $0\le u\le m$, all edges have the same $h$. Subtracting $\delta h$ from the third coordinate gives a perfect matching of the original rigid hypergraph. For each $h$ the corresponding $3$-graph is linear, so every pair lies in at most two edges of their union.
+\end{proof}
+
+\subsection{Identifying the shift from its bits}
+The following lemma recovers the individual multiplicities of marked coordinates from their total and one congruence.
+
+\begin{lemma}[Recovery of marked multiplicities]\label{finite:lem:marked-counts}
+Let $D\subseteq\{0,\ldots,m-1\}$ be empty or contain $0$. Assume that
+$\sum_{a\in D}a<m$ and that each positive element of $D$ exceeds the
+sum of all smaller elements of $D$. Let $n_0,\ldots,n_{m-1}$ be integers with $n_a=1$ for $a\notin D$
+and $n_a\in\{0,1,2\}$ for $a\in D$. If
+\[
+ \sum_a n_a=m,\qquad \sum_a a n_a\equiv\sum_a a\pmod m,
+\]
+then $n_a=1$ for every $a$.
+\end{lemma}
+\begin{proof}
+Put $\epsilon_a=n_a-1$. Then $\epsilon_a\in\{-1,0,1\}$ on $D$,
+$\sum\epsilon_a=0$, and $\sum a\epsilon_a\equiv0\pmod m$.
+The last sum has absolute value less than $m$, so it is zero as an
+integer. If $a$ were the largest positive label with $\epsilon_a\ne0$, then
+$|a\epsilon_a|>\sum_{b<a}|b\epsilon_b|$, contradicting the vanishing
+of the weighted sum. The equation $\sum_a\epsilon_a=0$ then gives
+$\epsilon_0=0$.
+\end{proof}
+For the lift, choose $D$ as in \cref{finite:lem:marked-counts}. For
+example, one can take $0$ together with an initial segment of
+$1,2,4,\ldots$ or $1,3,7,\ldots$ whose sum is less than $m$.
+For each shift $s\in S$, assign a bit $\alpha_s(a)$ to each marked coordinate $a\in D$ so that the vector $(\alpha_s(a))_{a\in D}$ uniquely identifies $s$. Put $\alpha_s(a)=0$ outside $D$. If there is only one shift, we may take $D=\varnothing$.
+
+\begin{theorem}[Cyclic lift with marked coordinates]\label{finite:thm:signature-lift}
+Let $m\ge3$ be odd, let $L\ge1$ be coprime to $m$, and let $\delta$
+be a unit modulo $m$. Suppose the matchings $P_s$ in
+\cref{finite:eq:single-sum} are the only perfect matchings of their union.
+Choose $D$ and the bits $\alpha_s(a)$ as above. Fix $\beta\in\{0,1\}$ and take the triples
+\begin{equation}\label{finite:eq:signature-lift}
+ \left((a,x),\ (\lambda a+s,x+\alpha_s(a)+\beta h),\
+ (\delta h-(\lambda+1)a-s,x+\alpha_s(a)+(\beta+1)h)\right)
+\end{equation}
+for $a\in\mathbb Z_m$, $x\in\mathbb Z_L$, $h\in\{0,1\}$, and
+$s\in S$. Here $x$ is the sheet index of the first vertex, and the three base coordinates sum to $\delta h$ modulo $m$. For each fixed pair $(h,s)$ the triples form a perfect matching. Their union over all $(h,s)$ is a balanced tripartite $2|S|$-rigid
+$3$-graph of part size $mL$ with maximum pair codegree at most two.
+\end{theorem}
+\begin{proof}
+For $L=1$ the result follows from \cref{finite:lem:double-sum}. Suppose $L\ge2$. For fixed $h,s$, the base coordinate in each part of \cref{finite:eq:signature-lift} is a bijective function of $a$. At each $a$, the corresponding sheet index is a translate of $x$, so these triples form a perfect matching. Projection determines the base edge and hence $(h,s)$. The sheet index of the first vertex gives $x$. Thus the lifted hypergraph is simple and the prescribed matchings are edge-disjoint.
+
+Let $P$ be any perfect matching, and let $u$ count its edges with $h=1$.
+Summing the three base coordinates over the edges of $P$ gives $m\mid u$. On each edge the third sheet index minus the second equals $h$ modulo $L$. Since $P$ covers each sheet exactly $m$ times in each of these parts, these differences sum to zero modulo $L$, giving $L\mid u$. Coprimality yields $mL\mid u$.
+Since $0\le u\le mL$, all edges of $P$ have a common $h$.
+
+Call the $m$ edges of $P$ meeting sheet $y$ of the second part the \emph{slice at $y$}. They cover sheet $y+h$ of the third part exactly once. For each unmarked first coordinate $a$, the vertex $(a,y-\beta h)$ belongs to an edge of this slice and is the only such vertex with coordinate $a$. For a marked coordinate $a$, the bit $\alpha_s(a)$ is 0 or 1, so the first-part sheet is either $y-\beta h$ or $y-\beta h-1$. Thus the multiplicity $n_a$ of $a$ in the slice is 1 for unmarked $a$ and at most 2 for marked $a$. Summing the three base coordinates over these $m$ edges gives $m\delta h\equiv0\pmod m$. The second and third base coordinates each run through $\mathbb Z_m$, so $\sum_a a n_a\equiv0\equiv\sum_a a\pmod m$. By \cref{finite:lem:marked-counts}, each first coordinate occurs exactly once as well. The projection of the slice is therefore one of the prescribed base matchings, indexed by $(h,s_y)$ for some $s_y\in S$.
+
+Fix a marked coordinate $a$ and a first-part vertex $(a,z)$. Put $y=z+\beta h$. The vertex is covered in slice $y$ if $\alpha_{s_y}(a)=0$, and in slice $y+1$ if $\alpha_{s_{y+1}}(a)=1$. Exactly one condition holds, so the two bits agree. This holds at every marked coordinate and every $y$. The bit vectors identify the shifts, hence all $s_y$ coincide and $P$ is a prescribed matching.
+
+By \cref{finite:lem:double-sum}, the base hypergraph has maximum pair codegree at most two. The lifts of a single base edge are pairwise vertex-disjoint. Thus for any fixed pair of vertices in distinct parts of the lift, each base edge containing their projections contributes at most one lifted edge containing the pair. Hence the lift also has maximum pair codegree at most two.
+\end{proof}
+
+One two-sheet choice is $\beta=0$, $\delta=1$. The linear two-sheet affine examples in \cref{finite:tab:linear-seed-bank} use $\beta=1$ with the indicated value of $\delta$. The same proof allows $D=\{0,1,3\}$ for at most eight shifts when $m\ge7$.
+
+\section{Linear refinements}\label{finite:sec:linear-lifts}
+\begin{theorem}[Linear cyclic lifts and small-period refinements]
+\label{finite:thm:linear-lift}
+Under the hypotheses of \cref{finite:thm:signature-lift}, take $\beta=1$.
+\begin{enumerate}
+\item If $L\ge4$, the lift with all $2|S|$ prescribed matchings is linear.
+\item If $L=3$, the full lift is linear whenever
+\begin{equation}\label{finite:eq:monotone-code}
+ \alpha_{s+\delta}(a)\le\alpha_s(a)
+ \quad\text{for every }a\in\mathbb Z_m\text{ and every }s\in S\text{ with }s+\delta\in S.
+\end{equation}
+\item If $L=2$, delete the matching $(1,s)$ for each $s\in S\cap(S+\delta)$. The remaining hypergraph is linear and has $2|S|-|S\cap(S+\delta)|$ prescribed perfect matchings.
+\end{enumerate}
+In each case the retained matchings are the only perfect matchings of their union.
+\end{theorem}
+\begin{proof}
+By \cref{finite:thm:signature-lift}, the full lift is rigid, and deleting any of its prescribed perfect matchings preserves rigidity. For a fixed $h$, a pair of base vertices belongs to at most one base edge, whose lifts are pairwise vertex-disjoint. It therefore remains to compare a lifted edge with $h=0$ and one with $h=1$.
+
+For a pair in the first and second parts, its base coordinates determine the same shift $s$ for both values of $h$. The second sheet index minus the first is $\alpha_s(a)$ for $h=0$ and $\alpha_s(a)+1$ for $h=1$. These are distinct modulo $L$ for $L\ge2$. For a pair in the second and third parts, the third sheet index minus the second gives $h$ directly. For a pair in the first and third parts, fix the base coordinates and the first sheet index. If the shift is $s$ at $h=0$, it is $s+\delta$ at $h=1$. The third sheet index for $h=1$ minus that for $h=0$ is congruent modulo $L$ to the integer
+\[
+ 2+\alpha_{s+\delta}(a)-\alpha_s(a)\in\{1,2,3\}.
+\]
+None of these three integers is divisible by $L$ when $L\ge4$. For $L=3$, the value 3 would require $\alpha_s(a)=0$ and $\alpha_{s+\delta}(a)=1$, contrary to \cref{finite:eq:monotone-code}. For $L=2$, any shift $s+\delta$ involved in such a pair belongs to $S\cap(S+\delta)$, so the matching $(1,s+\delta)$ is deleted.
+\end{proof}
+
+For the three-sheet affine lifts in \cref{finite:tab:linear-codes}, we take $\delta=1$. The bit vectors on $D=\{0,1,2\}$ are distinct and satisfy \cref{finite:eq:monotone-code}. Since $\delta$ is a unit and $S\subsetneq\mathbb Z_m$, the arcs $s\to s+\delta$ in $S$ form disjoint paths. Along each arc, every bit set to 1 at $s+\delta$ is already 1 at $s$. For the other affine lifts in \cref{finite:tab:linear-seed-bank}, order the shifts increasingly and encode their indices $0,\ldots,|S|-1$ in binary. Assign the bits from least to most significant to coordinates $0,1,2$ when three are needed, or $0,1$ when two suffice. The same table gives $\delta$ and the matching deletions for each two-sheet example.
+
+For $m\ge3$, take the two perfect matchings $\{(a,a,a)\colon a\in\mathbb Z_m\}$ and $\{(a,a+1,a+2)\colon a\in\mathbb Z_m\}$. Their union is linear. If a perfect matching uses $u$ edges from the second matching, summing the second coordinate minus the first gives $u\equiv0\pmod m$. Hence $u=0$ or $m$, proving rigidity and giving $\ell_3(m)\ge2$. For $m=1,2$, a single perfect matching gives $\ell_3(m)\ge1$.
+
+\section{Small unrestricted triple systems}\label{finite:sec:finite-inputs}
+We give rigid $3$-graphs on 12, 15, 18, 21, and 24 vertices. We verify rigidity in each case by enumerating the perfect matchings. The grafting theorem then extends these finite constructions to larger matching sizes.
+
+\subsection{Enumerating perfect matchings by exact cover}\label{finite:subsec:exact-cover}
+For the 12-, 15-, and 21-vertex examples, the tables list the edges themselves. For the 18- and 24-vertex examples, first expand each base triple into its two lifted edges. For verification we number the vertices $0,\ldots,n-1$, subtracting one from labels in tables indexed by $[n]$. In each resulting list, we check that each prescribed matching partitions the vertices into triples and that no triple occurs twice. To enumerate the perfect matchings, take the smallest uncovered vertex and try every edge through it whose vertices are all uncovered. Remove the three vertices of the chosen edge and repeat. When no vertices remain, record the chosen edges. Every completion contains a unique edge through the chosen vertex, so each perfect matching occurs on exactly one branch. The function checks that the set of matchings found equals the set prescribed and returns two integers, the number of perfect matchings and the number of search nodes.
+\par\noindent\begin{minipage}{\linewidth}
+\begin{verbatim}
+def check_rigid(n, colors):
+    V = frozenset(range(n))
+    rows = [tuple(frozenset(e) for e in M) for M in colors]
+    assert all(len(M) * 3 == n for M in rows)
+    for M in rows:
+        assert all(len(e) == 3 and e <= V for e in M)
+        assert len(set().union(*M)) == n
+    E = tuple(e for M in rows for e in M)
+    assert len(set(E)) == len(E)
+    through = {v: tuple(e for e in E if v in e) for v in V}
+    nodes = 0
+    solutions = set()
+    def visit(R, chosen):
+        nonlocal nodes
+        nodes += 1
+        if not R:
+            solutions.add(frozenset(chosen))
+            return
+        v = min(R)
+        for e in through[v]:
+            if e <= R:
+                visit(R - e, chosen + (e,))
+    visit(V, ())
+    assert solutions == {frozenset(M) for M in rows}
+    return len(solutions), nodes
+\end{verbatim}
+\end{minipage}\par
+An independent implementation branches on an uncovered vertex lying in the fewest edges whose vertices are all still uncovered.
+
+\subsection{Twelve vertices and fifteen vertices}\label{finite:subsec:twelve-fifteen}
+The first table lists the 12 perfect matchings on 12 vertices, and the second the 10 perfect matchings on 15 vertices. Each parenthesized triple denotes an unordered edge.
+\begin{center}\small
+\begin{tabular}{rllll}
+\toprule
+Matching&\multicolumn{4}{c}{Edges on $[12]$}\\\midrule
+1&$(3,6,12)$&$(2,4,10)$&$(5,7,8)$&$(1,9,11)$\\
+2&$(1,4,12)$&$(8,9,10)$&$(3,5,11)$&$(2,6,7)$\\
+3&$(1,3,4)$&$(2,8,10)$&$(6,9,11)$&$(5,7,12)$\\
+4&$(6,11,12)$&$(2,3,8)$&$(4,7,9)$&$(1,5,10)$\\
+5&$(2,3,5)$&$(4,7,11)$&$(1,6,8)$&$(9,10,12)$\\
+6&$(1,3,6)$&$(4,8,12)$&$(7,10,11)$&$(2,5,9)$\\
+7&$(3,9,10)$&$(2,5,11)$&$(1,7,12)$&$(4,6,8)$\\
+8&$(5,6,10)$&$(8,11,12)$&$(1,7,9)$&$(2,3,4)$\\
+9&$(4,10,11)$&$(3,6,9)$&$(2,7,12)$&$(1,5,8)$\\
+10&$(4,8,9)$&$(5,6,7)$&$(2,3,12)$&$(1,10,11)$\\
+11&$(2,9,11)$&$(3,7,10)$&$(1,8,12)$&$(4,5,6)$\\
+12&$(1,4,9)$&$(3,7,11)$&$(2,6,8)$&$(5,10,12)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{center}\small
+\begin{tabular}{rlllll}
+\toprule
+Matching&\multicolumn{5}{c}{Edges on $[15]$}\\\midrule
+1&$(7,8,10)$&$(2,3,9)$&$(4,5,6)$&$(1,11,13)$&$(12,14,15)$\\
+2&$(5,7,14)$&$(1,3,6)$&$(4,9,11)$&$(8,10,12)$&$(2,13,15)$\\
+3&$(6,7,8)$&$(1,3,9)$&$(2,4,5)$&$(11,12,13)$&$(10,14,15)$\\
+4&$(7,10,11)$&$(4,6,8)$&$(3,5,9)$&$(1,13,14)$&$(2,12,15)$\\
+5&$(4,7,10)$&$(2,8,12)$&$(5,6,9)$&$(3,11,14)$&$(1,13,15)$\\
+6&$(6,7,11)$&$(5,8,12)$&$(4,9,10)$&$(2,13,14)$&$(1,3,15)$\\
+7&$(7,9,15)$&$(2,5,8)$&$(1,3,4)$&$(10,11,14)$&$(6,12,13)$\\
+8&$(4,7,12)$&$(8,9,10)$&$(2,6,14)$&$(3,5,13)$&$(1,11,15)$\\
+9&$(4,7,14)$&$(6,8,9)$&$(1,11,12)$&$(2,3,10)$&$(5,13,15)$\\
+10&$(1,5,9)$&$(2,7,15)$&$(6,10,12)$&$(4,11,14)$&$(3,8,13)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The search in \cref{finite:subsec:exact-cover} finds exactly the matchings in the two tables, 12 in the first and 10 in the second. In particular,
+\[
+ f_3(12)\ge12,\qquad f_3(15)\ge10.
+\]
+
+\subsection{Thirteen perfect matchings on 18 vertices}
+\begin{proposition}\label{finite:prop:thirteen18}
+There is a simple $13$-rigid $3$-graph on 18 vertices.
+In particular, $f_3(18)\ge13$.
+\end{proposition}
+\begin{proof}[Explicit construction and finite certificate]
+Start with the construction on $\mathbb F_3^2$ from the article. Represent $x,y\in\mathbb F_3$ by $0,1,2$ and number the vertex $(x,y)$ by the integer $3x+y$. Apply the two-layer construction of \cref{finite:lem:transfer} on $\{0,\ldots,8\}\times\mathbb Z_2$. Row $j$ below lifts the matching indexed by $j-1$ in Table~1 of the article. The superscript on a triple lists the vertices shifted to the next layer. A triple without a superscript stays in its layer. For example, $036^{6}$ shifts vertex 6 and leaves vertices 0 and 3 in their original layer. Expanding each base triple into its two lifted edges gives one perfect matching of six edges per row.
+\[
+\begin{array}{c|ccc}
+1&012&345&678\\
+2&036^{6}&147&258^{5}\\
+3&048^{4}&156^{6}&237^{7}\\
+4&057^{7}&138^{3}&246^{6}\\
+5&015&267&348^{8}\\
+6&024^{2}&168^{68}&357^{5}\\
+7&078^{78}&123^{3}&456^{6}\\
+8&037^{3}&148&256^{5}\\
+9&046^{4}&157^{5}&238^{8}\\
+10&058^{8}&136^{3}&247^{47}\\
+11&013^{13}&268&457^{5}\\
+12&025^{2}&178^{78}&346^{46}\\
+13&067^{67}&124^{4}&358^{5}
+\end{array}.
+\]
+The triples in each row partition the 9 base vertices. The 39 base triples are distinct and each has two different lifts, so the lifted hypergraph is simple and its 78 edges are partitioned into 13 perfect matchings. The certificate labels $(v,j)$ by $2v+j+1$. Subtract one from each label for the zero-based checker in \cref{finite:subsec:exact-cover}. Both searches find exactly the 13 prescribed matchings, one through each edge incident with vertex 1 in the certificate. The maximum pair codegree is 4.
+\end{proof}
+
+\subsection{Ten perfect matchings on 21 vertices}\label{finite:subsec:twentyone}
+The following ten matchings use the vertices $0,\ldots,20$.
+\[
+\begin{array}{@{}r@{\quad}*{7}{c}@{}}
+ \text{Matching}&\multicolumn{7}{c}{\text{Triples}}\\
+ \midrule
+ 1 & \{0,1,11\} & \{3,4,5\} & \{6,7,8\} & \{17,18,19\} & \{13,15,16\} & \{10,12,14\} & \{2,9,20\}\\
+ 2 & \{0,1,16\} & \{2,5,8\} & \{4,6,12\} & \{10,11,20\} & \{13,15,18\} & \{7,14,17\} & \{3,9,19\}\\
+ 3 & \{0,1,8\} & \{2,4,5\} & \{3,6,7\} & \{9,10,13\} & \{11,15,17\} & \{12,19,20\} & \{14,16,18\}\\
+ 4 & \{0,11,12\} & \{1,6,8\} & \{4,5,7\} & \{2,10,17\} & \{13,19,20\} & \{15,16,18\} & \{3,9,14\}\\
+ 5 & \{0,4,12\} & \{1,2,7\} & \{8,14,15\} & \{9,16,19\} & \{3,13,17\} & \{6,10,18\} & \{5,11,20\}\\
+ 6 & \{0,6,12\} & \{8,10,14\} & \{4,7,11\} & \{1,15,20\} & \{2,13,18\} & \{5,9,19\} & \{3,16,17\}\\
+ 7 & \{0,8,12\} & \{1,7,14\} & \{4,6,11\} & \{3,18,19\} & \{2,15,20\} & \{9,10,16\} & \{5,13,17\}\\
+ 8 & \{0,4,17\} & \{1,3,7\} & \{2,5,6\} & \{9,15,19\} & \{10,11,13\} & \{8,14,20\} & \{12,16,18\}\\
+ 9 & \{0,6,14\} & \{1,4,11\} & \{3,8,16\} & \{10,15,18\} & \{7,9,17\} & \{5,12,20\} & \{2,13,19\}\\
+ 10 & \{0,6,16\} & \{1,4,8\} & \{2,12,14\} & \{3,13,15\} & \{5,9,17\} & \{10,11,18\} & \{7,19,20\}
+\end{array}
+\]
+
+Each row partitions the vertex set, and the rows contain 70 distinct edges. Both enumerations in \cref{finite:subsec:exact-cover} find exactly the 10 listed matchings. Consequently
+\begin{equation}\label{finite:eq:ten21}
+ f_3(21)\ge10.
+\end{equation}
+
+\subsection{Ten perfect matchings on 24 vertices}\label{finite:subsec:twentyfour}
+On $[12]\times\mathbb Z_2$, the superscripts give the outgoing sets, with $O_e=\varnothing$ for an unmarked triple. Taking both lifts of the four triples in each row gives a perfect matching of eight edges.
+{\small\setlength{\arraycolsep}{3pt}
+\[
+\begin{array}{c|cccc}
+1&\{3,6,12\}^{\{6,12\}}&\{2,4,10\}^{\{4\}}&\{5,7,8\}^{\{8\}}&\{1,9,11\}^{\{9\}}\\
+2&\{1,3,4\}&\{2,8,10\}^{\{8,10\}}&\{6,9,11\}^{\{11\}}&\{5,7,12\}^{\{12\}}\\
+3&\{2,3,5\}^{\{3\}}&\{4,7,11\}&\{1,6,8\}^{\{6\}}&\{9,10,12\}^{\{10\}}\\
+4&\{1,3,6\}^{\{6\}}&\{4,8,12\}^{\{12\}}&\{7,10,11\}&\{2,5,9\}^{\{9\}}\\
+5&\{3,9,10\}^{\{10\}}&\{2,5,11\}&\{1,7,12\}^{\{7,12\}}&\{4,6,8\}\\
+6&\{5,6,10\}^{\{6\}}&\{8,11,12\}^{\{11\}}&\{1,7,9\}^{\{7\}}&\{2,3,4\}\\
+7&\{4,10,11\}&\{3,6,9\}&\{2,7,12\}^{\{12\}}&\{1,5,8\}^{\{5\}}\\
+8&\{4,8,9\}^{\{8,9\}}&\{5,6,7\}&\{2,3,12\}^{\{12\}}&\{1,10,11\}^{\{10,11\}}\\
+9&\{2,9,11\}^{\{11\}}&\{3,7,10\}^{\{7,10\}}&\{1,8,12\}&\{4,5,6\}\\
+10&\{1,4,9\}^{\{4\}}&\{3,7,11\}^{\{7,11\}}&\{2,6,8\}^{\{6,8\}}&\{5,10,12\}
+\end{array}.
+\]
+}
+The 4 base triples in each row partition $[12]$. All 40 base triples are distinct, and each has a nonempty local part, so the lift has 80 distinct edges. The label $12j+v-1$ of the lifted vertex $(v,j)$ can be used directly in the zero-based checker. Both searches in \cref{finite:subsec:exact-cover} find exactly the 10 prescribed perfect matchings. This proves
+\begin{equation}\label{finite:eq:ten24}
+ f_3(24)\ge10.
+\end{equation}
+This two-sheet example has maximum pair codegree three.
+
+\subsection{Ten perfect matchings on \texorpdfstring{$3m$}{3m} vertices for all \texorpdfstring{$m\ge2$}{m >= 2}}
+\begin{theorem}\label{finite:thm:ten-all}
+For every integer $m\ge2$, we have $f_3(3m)\ge10$.
+Moreover $f_3(3)=1$, $f_3(6)=10$, and
+$\min_{m\ge2}f_3(3m)=10$.
+\end{theorem}
+\begin{proof}
+We first construct a $10$-rigid hypergraph for each matching size $m=2,\ldots,11$. At $m=2$, the complete $3$-graph on 6 vertices has ten complementary pairs of triples. At $m=3$, retain 10 of the 13 perfect matchings on 9 vertices. At $m=4,5$, use the tables in \cref{finite:subsec:twelve-fifteen}, retaining ten matchings. At $m=6$, retain ten matchings from \cref{finite:prop:thirteen18}. At $m=7,8$, use the 21- and 24-vertex constructions in \cref{finite:subsec:twentyone,finite:subsec:twentyfour}. At $m=9$, use the period-three construction of \cref{finite:subsec:eleven-period} and delete one of its eleven perfect matchings. At $m=10$, use the period-five construction of \cref{finite:subsec:ten-period}. At $m=11$, apply \cref{finite:lem:double-sum} with
+\[
+ N_{h,s}=\{(a,2a+s,h-3a-s):a\in\mathbb Z_{11}\},
+ \quad h\in\{0,1\},\quad s\in\{0,1,2,3,5\}.
+\]
+The example at $m=11$ is balanced tripartite.
+
+The electronic data include an explicit list of ten matchings at each of these ten initial sizes, together with an exact-cover check of every list.
+
+By \cref{finite:thm:graft}, each graft with the example on 11 vertices per part increases the matching size by 10. Every $m\ge2$ has a unique representation $m=a+10q$ with $a\in\{2,\ldots,11\}$ and $q\ge0$. Start with the hypergraph at size $a$ and graft the balanced example onto it $q$ times. The resulting hypergraph has matching size $m$ and exactly 10 perfect matchings.
+
+The values $f_3(3)=1$ and $f_3(6)=10$ from the article give the claimed minimum and show that the threshold $m=2$ is sharp.
+\end{proof}
+
+\section{Thresholds from the finite seeds}\label{finite:sec:thresholds}
+
+\Cref{finite:tab:allorders} gives a threshold $m_0$ for each of the three incidence classes. In each class and for every $m\ge m_0$, the grafting constructions give a network of dimension 12 on $3m$ paths.
+
+\begin{table}[htbp]
+\centering
+\caption{Thresholds guaranteeing dimension 12 at every matching size $m\ge m_0$. The integers $m_0$ come from \cref{finite:thm:thresholds,finite:thm:linear-thresholds}, and $n_0=3m_0$.}\label{finite:tab:allorders}
+\begin{tabular}{lrr}
+\toprule
+Restrictions on source supports & Matching size $m_0$ & Paths $n_0$\\
+\midrule
+Unrestricted & 21 & 63\\
+Balanced tripartite & 43 & 129\\
+Linear balanced tripartite & 113 & 339\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{theorem}[Balanced tripartite and unrestricted thresholds]\label{finite:thm:thresholds}
+For each $t$ in the table below, there is a balanced tripartite $t$-rigid $3$-graph with $m$ vertices per part and maximum pair codegree at most 2 whenever $m\ge m_0$ or $m$ is odd with $m\ge m_1$. Thus $g_3(m)\ge t$ at every such size.
+\[
+\begin{array}{@{}l*{3}{r}@{}}
+ t   &8&10&12\\
+ \midrule
+ m_0 &7&31&43\\
+ m_1 &7&17&35
+\end{array}
+\]
+For unrestricted triples, $f_3(3m)\ge12$ for every $m\ge21$.
+\end{theorem}
+\begin{proof}
+A graft with a tripartite seed of part size $q$ adds $q-1$ to the matching size by \cref{finite:eq:graft-f,finite:eq:graft-g}. Before each graft, retain the required number of prescribed perfect matchings in both hypergraphs.
+
+For 8 perfect matchings, the four initial part sizes are $7,8,9,10$. The modular family gives $m=5,7$, and the Latin square in \cref{finite:eq:latin-odd} gives $m=8$. Grafting two copies of the seed with 5 vertices per part gives $m=9$, and the two-sheet lift of that same seed gives $m=10$. These four consecutive sizes represent every residue class modulo 4. Each further graft with the five-vertex-per-part seed adds 4, giving every $m\ge7$.
+
+For 10 perfect matchings, take balanced tripartite examples of part sizes $11,13,17,19$ and retain ten matchings in each. Grafting them adds $10,12,16,18$ vertices per part, respectively. Dividing by 2 gives increments $5,6,8,9$. The five consecutive integers
+\[
+ 8,\quad9,\quad10=5+5,\quad11=5+6,\quad12=6+6
+\]
+are nonnegative integer combinations of $5,6,8,9$. Repeatedly adding 5 gives such a representation for every $u\ge8$, and grafting gives each odd part size $m=1+2u\ge17$. For even part sizes, use
+\[
+ 32=22+10,\quad34=22+12,\quad36=26+10,\quad
+ 38=22+16,\quad40=22+18.
+\]
+Two-sheet lifts of the seeds of part sizes 11 and 13 give $m=22,26$, respectively. The five displayed sizes represent all even residues modulo 10. Repeated grafts adding 10 vertices per part therefore give every even $m\ge32$, completing the bound for $m\ge31$.
+
+For 12 perfect matchings, use balanced tripartite examples of part sizes $13,19,23,29$ and a three-sheet lift of part size 39. Dividing their graft increments by 2 gives $6,9,11,14,19$. As nonnegative integer combinations, these five values represent the six consecutive integers
+\[
+ 17=6+11,\quad18=9+9,\quad19,\quad20=6+14,\quad
+ 21=6+6+9,\quad22=11+11.
+\]
+Repeatedly adding 6 gives a representation for every $u\ge17$, and grafting gives every odd part size $m=1+2u\ge35$. For even sizes, start with
+\[
+ 44=26+18,\quad46,\quad48=26+22,\quad50=26+12+12,
+ \quad52,\quad54=26+28.
+\]
+The examples of part sizes $26,46,52$ are cyclic lifts with parameters $(m,L)=(13,2),(23,2),(13,4)$, respectively. The six displayed sizes represent all even residues modulo 12. Repeated grafts adding 12 vertices per part give every even $m\ge44$ and hence the bound for every $m\ge43$. The Latin-square example is linear. The modular constructions and affine lifts used above have maximum pair codegree at most 2, and \cref{finite:eq:graft-degree} preserves this bound under grafting.
+
+For 12 perfect matchings with unrestricted triples, start with the hypergraphs at $m=3,4,6$, which have 13, 12, and 13 perfect matchings, respectively. The balanced tripartite examples of part sizes $13,19,23,29$ give increments $12,18,22,28$. Six odd starting sizes are
+\[
+ 19,\quad21=3+18,\quad23,\quad25=3+22,\quad
+ 27=3+12+12,\quad29.
+\]
+Repeated grafts with the seed of part size 13 give every odd $m\ge19$. Six even starting sizes are
+\[
+ 22=4+18,\quad24=6+18,\quad26=4+22,\quad28=6+22,
+ \quad30=6+12+12,\quad32=4+28.
+\]
+Grafting the same seed repeatedly gives every even $m\ge22$. Together the odd and even cases give $f_3(3m)\ge12$ for every $m\ge21$.
+\end{proof}
+
+\subsection{Thresholds for linear tripartite hypergraphs}
+\begin{theorem}\label{finite:thm:linear-thresholds}
+For each target dimension $t$ in the table, the linear balanced tripartite constructions give $\ell_3(m)\ge t$ for every matching size $m\ge m_0$.
+\[
+\begin{array}{@{}l*{5}{r}@{}}
+ t   & 8 & 9 & 10 & 11  & 12\\
+ \midrule
+ m_0 &33 &62 & 74 &112 &113
+\end{array}
+\]
+\end{theorem}
+\begin{proof}
+\Cref{finite:tab:linear-seed-bank} lists the seeds from the Latin construction and \cref{finite:thm:linear-lift}. Its column $d$ gives the number of prescribed perfect matchings after the indicated deletions and before any further reduction to $t$. The bit vectors for the affine lifts are given in \cref{finite:tab:linear-codes}. Grafting a seed of part size $q$ increases the part size by $q-1$ and preserves linearity by \cref{finite:thm:graft}.
+
+Put $s=m-1$. For each target $t$, \crefrange{finite:tab:residues-8}{finite:tab:residues-12} give an increment $a$ and a representative $w_r$ for each residue class $r$ modulo $a$. Write $W=\max_r w_r$. For $t=8,9,10,11,12$, the pairs $(a,W)$ are $(7,38)$, $(21,81)$, $(25,97)$, $(37,147)$, and $(38,149)$, respectively.
+
+If $s\ge W-a+1$ and $r\equiv s\pmod a$, then $s\ge w_r$, since otherwise $s\le w_r-a\le W-a$. Thus $s=w_r+ja$ for a nonnegative integer $j$. Each positive summand $b$ of the displayed representation of $w_r$ comes from a seed of part size $b+1$ in \cref{finite:tab:linear-seed-bank}. For $w_r=0$, the sum is empty. For the five targets in order, the same table supplies seeds of part size $a+1=8,22,26,38,39$, respectively, for the $j$ additional summands $a$. Retain any $t$ prescribed matchings in each seed used. Since $s>0$, at least one seed occurs, and \cref{finite:cor:graft-semigroup} gives every part size $m=s+1\ge W-a+2$.
+\end{proof}
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\captionof{table}{Linear seeds for the residue classes. An $L$-sheet lift of a base with part size $m$ has part size $q=mL$. For the affine rows, \cref{finite:subsec:affine-seeds} lists $\lambda$ and $S$ for each $m$. An entry $s$ in the Deletions column means that matching $(1,s)$ was removed, and $d$ counts the matchings retained. Rows with a dash under $\delta$ use the Latin square of \cref{finite:subsec:latin}.}
+\label{finite:tab:linear-seed-bank}
+\begin{tabular}{@{}rrrrrl@{\qquad\qquad}rrrrrl@{}}
+\toprule
+$q$&$m$&$L$&$d$&$\delta$&Deletions&$q$&$m$&$L$&$d$&$\delta$&Deletions\\\midrule
+8 & 8 & 1 & 8 & -- & None & 66 & 11 & 6 & 10 & 1 & $\varnothing$\\
+20 & 5 & 4 & 8 & 1 & $\varnothing$ & 68 & 17 & 4 & 10 & 1 & $\varnothing$\\
+21 & 7 & 3 & 8 & 1 & $\varnothing$ & 69 & 23 & 3 & 12 & 1 & $\varnothing$\\
+22 & 11 & 2 & 9 & 4 & $\{5\}$ & 74 & 37 & 2 & 10 & 6 & $\varnothing$\\
+24 & 8 & 3 & 8 & -- & None & 76 & 19 & 4 & 12 & 1 & $\varnothing$\\
+26 & 13 & 2 & 10 & 2 & $\{2,4\}$ & 77 & 11 & 7 & 10 & 1 & $\varnothing$\\
+30 & 5 & 6 & 8 & 1 & $\varnothing$ & 78 & 13 & 6 & 12 & 1 & $\varnothing$\\
+33 & 11 & 3 & 10 & 1 & $\varnothing$ & 82 & 41 & 2 & 10 & 6 & $\varnothing$\\
+34 & 17 & 2 & 10 & 6 & $\varnothing$ & 85 & 17 & 5 & 10 & 1 & $\varnothing$\\
+38 & 19 & 2 & 11 & 4 & $\{0\}$ & 86 & 43 & 2 & 10 & 8 & $\varnothing$\\
+39 & 13 & 3 & 12 & 1 & $\varnothing$ & 87 & 29 & 3 & 12 & 1 & $\varnothing$\\
+44 & 11 & 4 & 10 & 1 & $\varnothing$ & 91 & 13 & 7 & 12 & 1 & $\varnothing$\\
+46 & 23 & 2 & 12 & 3 & $\varnothing$ & 92 & 23 & 4 & 12 & 1 & $\varnothing$\\
+51 & 17 & 3 & 10 & 1 & $\varnothing$ & 93 & 31 & 3 & 12 & 1 & $\varnothing$\\
+52 & 13 & 4 & 12 & 1 & $\varnothing$ & 104 & 13 & 8 & 12 & 1 & $\varnothing$\\
+55 & 11 & 5 & 10 & 1 & $\varnothing$ & 116 & 29 & 4 & 12 & 1 & $\varnothing$\\
+57 & 19 & 3 & 12 & 1 & $\varnothing$ & 117 & 13 & 9 & 12 & 1 & $\varnothing$\\
+58 & 29 & 2 & 12 & 3 & $\varnothing$ & 124 & 31 & 4 & 12 & 1 & $\varnothing$\\
+62 & 31 & 2 & 12 & 8 & $\varnothing$ & 138 & 23 & 6 & 12 & 1 & $\varnothing$\\
+65 & 13 & 5 & 12 & 1 & $\varnothing$ & 143 & 13 & 11 & 12 & 1 & $\varnothing$\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering\small
+\captionof{table}{Bit vectors for the three-sheet affine lifts with $\delta=1$. The entries correspond to the shifts in increasing order from \cref{finite:subsec:affine-seeds}. From least to most significant, the bits give $\alpha_s(0),\alpha_s(1),\alpha_s(2)$.}
+\label{finite:tab:linear-codes}
+\begin{tabular}{rl}\toprule
+Base $m$&Bit vectors (integers)\\\midrule
+7&$(7,6,4,0)$\\
+11&$(7,6,4,0,5)$\\
+13&$(7,6,4,5,1,3)$\\
+17&$(7,6,4,5,1)$\\
+19&$(7,6,3,2,5,4)$\\
+23&$(7,6,4,5,1,0)$\\
+29&$(7,6,4,3,5,1)$\\
+31&$(7,6,5,3,4,2)$\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\begingroup
+\setlength{\LTpre}{6pt plus 2pt minus 1pt}
+\setlength{\LTpost}{4pt plus 2pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\begin{longtable}{@{}rrl@{}}
+\caption{Residue representatives and their decompositions for $t=8$, $a=7$, and $W=38$.}\label{finite:tab:residues-8}\\
+\toprule
+Residue $r$&$w_r$&Increments\\\midrule
+\endfirsthead
+\multicolumn{3}{c}{\tablename~\thetable\ (continued)}\\
+\toprule
+Residue $r$&$w_r$&Increments\\\midrule
+\endhead
+0 & 0 & $0$\\
+1 & 29 & $29$\\
+2 & 23 & $23$\\
+3 & 38 & $38$\\
+4 & 25 & $25$\\
+5 & 19 & $19$\\
+6 & 20 & $20$\\
+\bottomrule
+\end{longtable}
+\setlength{\tabcolsep}{2.2pt}
+\begin{center}
+\begin{minipage}[t]{0.485\linewidth}
+\centering
+\captionof{table}{Residue representatives for $t=9$ ($a=21$, $W=81$).}\label{finite:tab:residues-9}
+\smallskip\small
+\begin{tabular}{@{}rrl@{\hspace{0.65em}}rrl@{}}
+\toprule
+Residue $r$&$w_r$&Increments&Residue $r$&$w_r$&Increments\\\midrule
+0 & 0 & $0$ & 11 & 32 & $32$\\
+1 & 43 & $43$ & 12 & 33 & $33$\\
+2 & 65 & $65$ & 13 & 76 & $76$\\
+3 & 45 & $45$ & 14 & 56 & $56$\\
+4 & 25 & $25$ & 15 & 57 & $57$\\
+5 & 68 & $68$ & 16 & 37 & $37$\\
+6 & 69 & $32+37$ & 17 & 38 & $38$\\
+7 & 70 & $25+45$ & 18 & 81 & $81$\\
+8 & 50 & $50$ & 19 & 61 & $61$\\
+9 & 51 & $51$ & 20 & 62 & $25+37$\\
+10 & 73 & $73$ &  &  & \\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\linewidth}
+\centering
+\captionof{table}{Residue representatives for $t=10$ ($a=25$, $W=97$).}\label{finite:tab:residues-10}
+\smallskip\small
+\begin{tabular}{@{}rrl@{\hspace{0.65em}}rrl@{}}
+\toprule
+Residue $r$&$w_r$&Increments&Residue $r$&$w_r$&Increments\\\midrule
+0 & 0 & $0$ & 13 & 38 & $38$\\
+1 & 51 & $51$ & 14 & 64 & $64$\\
+2 & 77 & $77$ & 15 & 65 & $65$\\
+3 & 78 & $33+45$ & 16 & 66 & $33+33$\\
+4 & 54 & $54$ & 17 & 67 & $67$\\
+5 & 80 & $37+43$ & 18 & 43 & $43$\\
+6 & 56 & $56$ & 19 & 69 & $32+37$\\
+7 & 32 & $32$ & 20 & 45 & $45$\\
+8 & 33 & $33$ & 21 & 71 & $33+38$\\
+9 & 84 & $84$ & 22 & 97 & $32+65$\\
+10 & 85 & $85$ & 23 & 73 & $73$\\
+11 & 61 & $61$ & 24 & 74 & $37+37$\\
+12 & 37 & $37$ &  &  & \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+\begin{center}
+\begin{minipage}[t]{0.485\linewidth}
+\centering
+\captionof{table}{Residue representatives for $t=11$ ($a=37$, $W=147$).}\label{finite:tab:residues-11}
+\smallskip\small
+\begin{tabular}{@{}rrl@{\hspace{0.65em}}rrl@{}}
+\toprule
+Residue $r$&$w_r$&Increments&Residue $r$&$w_r$&Increments\\\midrule
+0 & 0 & $0$ & 19 & 56 & $56$\\
+1 & 38 & $38$ & 20 & 57 & $57$\\
+2 & 76 & $38+38$ & 21 & 95 & $38+57$\\
+3 & 77 & $77$ & 22 & 96 & $45+51$\\
+4 & 115 & $115$ & 23 & 134 & $57+77$\\
+5 & 116 & $116$ & 24 & 61 & $61$\\
+6 & 117 & $56+61$ & 25 & 99 & $38+61$\\
+7 & 118 & $57+61$ & 26 & 137 & $137$\\
+8 & 45 & $45$ & 27 & 64 & $64$\\
+9 & 83 & $38+45$ & 28 & 102 & $38+64$\\
+10 & 121 & $57+64$ & 29 & 103 & $103$\\
+11 & 122 & $45+77$ & 30 & 141 & $38+103$\\
+12 & 86 & $86$ & 31 & 68 & $68$\\
+13 & 124 & $38+86$ & 32 & 106 & $38+68$\\
+14 & 51 & $51$ & 33 & 107 & $51+56$\\
+15 & 89 & $38+51$ & 34 & 108 & $51+57$\\
+16 & 90 & $90$ & 35 & 109 & $45+64$\\
+17 & 91 & $91$ & 36 & 147 & $56+91$\\
+18 & 92 & $92$ &  &  & \\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\linewidth}
+\centering
+\captionof{table}{Residue representatives for $t=12$ ($a=38$, $W=149$).}\label{finite:tab:residues-12}
+\smallskip\small
+\begin{tabular}{@{}rrl@{\hspace{0.65em}}rrl@{}}
+\toprule
+Residue $r$&$w_r$&Increments&Residue $r$&$w_r$&Increments\\\midrule
+0 & 0 & $0$ & 19 & 57 & $57$\\
+1 & 77 & $77$ & 20 & 96 & $45+51$\\
+2 & 116 & $116$ & 21 & 135 & $45+90$\\
+3 & 117 & $56+61$ & 22 & 136 & $45+91$\\
+4 & 118 & $57+61$ & 23 & 61 & $61$\\
+5 & 119 & $51+68$ & 24 & 138 & $61+77$\\
+6 & 120 & $45+75$ & 25 & 101 & $45+56$\\
+7 & 45 & $45$ & 26 & 64 & $64$\\
+8 & 122 & $45+77$ & 27 & 103 & $103$\\
+9 & 123 & $123$ & 28 & 142 & $142$\\
+10 & 86 & $86$ & 29 & 143 & $51+92$\\
+11 & 125 & $57+68$ & 30 & 68 & $68$\\
+12 & 126 & $51+75$ & 31 & 107 & $51+56$\\
+13 & 51 & $51$ & 32 & 108 & $51+57$\\
+14 & 90 & $90$ & 33 & 109 & $45+64$\\
+15 & 91 & $91$ & 34 & 148 & $45+103$\\
+16 & 92 & $92$ & 35 & 149 & $57+92$\\
+17 & 131 & $45+86$ & 36 & 112 & $51+61$\\
+18 & 56 & $56$ & 37 & 75 & $75$\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
+\endgroup
+
+\section{Using the electronic source lists}
+
+For $1\le m\le1000$, the archive gives lower bounds on the attainable GHZ dimension for unrestricted, balanced tripartite, and linear balanced tripartite $3$-graphs. To realize any positive dimension $d$ up to a listed bound, retain $d$ prescribed perfect matchings. In the exported JSON file, entry $i$ of the zero-indexed \texttt{matchings} array lists the $m$ triples for internal label $i$. Each triple gives the three output paths of one source. With $m$ triples per matching, the network uses $dm$ source configurations.
+
+\begin{samepage}
+To export the balanced tripartite networks of dimension 12 on 39 and 117 paths, run the following commands in the extracted data directory. The 117-path network is linear.
+\begin{verbatim}
+python3 construct_cumulative.py --m 13 --tripartite --states 12 \
+    --export twelve_on_39.json
+python3 construct_cumulative.py --m 39 --linear --states 12 \
+    --export twelve_linear_on_117.json
+\end{verbatim}
+\end{samepage}
+The archive also lists sources for dimension 8 on 15 paths and dimension 13 on 18 paths. For small networks, \texttt{verification/verify\_export.py} enumerates all perfect matchings by exact cover. For the larger examples, the lift and grafting proofs show that the listed matchings exhaust all perfect matchings.
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+\end{document}

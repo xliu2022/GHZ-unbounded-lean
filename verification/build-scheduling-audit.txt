@@ -1,0 +1,225 @@
+BUILD SCHEDULING AUDIT
+Date: 2026-11-23
+Scope: source-level, read-only investigation of fresh-build concurrency.
+
+CONCLUSION
+
+The fixed Palomar pipeline does not invoke scripts/build_serial.py. Its
+candidate solution-build phase runs `lake build <solution_module>` directly.
+No Lake job-count limit was found in that invocation or in the fixed pipeline's
+environment policy. In particular, LEAN_NUM_THREADS is absent from the sandbox
+environment allowlist and cannot be passed through merely by setting it in the
+outer GitHub workflow environment.
+
+The inspected Lean/Lake v4.35.0-rc2 sources do not provide a supported global
+jobs/maxJobs setting in lakefile.toml or a corresponding Lake build CLI option.
+The supported moreLeanArgs and weakLeanArgs fields can pass -j1 to each Lean
+compiler, but this controls the individual compiler's worker count, not the
+number of modules Lake builds concurrently. It is not a complete solution to
+the module-concurrency concern.
+
+No project build configuration, sandbox policy, execution profile, checker, or
+proof-checking setting was changed by this investigation. No Lean/Lake command
+or official fresh verification run was started during this audit.
+
+The remaining statement is a capacity risk, not a demonstrated failure:
+the peak memory of an official fresh build of this project has not yet been
+measured. Neither the local serial-build method nor failures on a smaller local
+machine establish that the official fresh build will succeed or necessarily
+run out of memory.
+
+FIXED SOURCES EXAMINED
+
+1. PalomarRegistry/PalomarSubmission commit
+   14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+
+   Official archive retrieved without executing its code:
+   https://codeload.github.com/PalomarRegistry/PalomarSubmission/tar.gz/14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+
+   Local extracted source:
+   /workspace/scratch/f48f4c8e3717/palomar-build-audit/PalomarSubmission-14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+
+   scripts/verify_submission.py SHA-256:
+   3ff03bf4d7774ec47e1e81fe397d03e54895ee59901036580c6da3b57010cc08
+
+   .github/workflows/submission.yml SHA-256:
+   10d97d59e223c3378d4b96601260f26fec1b27d4fd94739bc06a63ec3bab9c17
+
+   verification-profile.json SHA-256:
+   94fcd7906a1b6c076c0036d742e1c5add8625e49bb474818ec8924576dbf0caa
+
+   execution-profiles.json SHA-256:
+   7bef8cba4402f3d1e7324d501fdcbda44ece376fcdc98ea4c4ca945cca731bf4
+
+2. Installed Lean/Lake v4.35.0-rc2 source tree:
+   /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/src/lean
+
+   The release distribution does not contain all C++ implementation files.
+   The necessary runtime source files were additionally read from the exact
+   v4.35.0-rc2 release tag, including:
+   https://github.com/leanprover/lean4/blob/v4.35.0-rc2/src/runtime/object.cpp
+   https://github.com/leanprover/lean4/blob/v4.35.0-rc2/src/util/shell.cpp
+   https://github.com/leanprover/lean4/blob/v4.35.0-rc2/src/runtime/process.cpp
+
+   Local copies are in:
+   /workspace/scratch/f48f4c8e3717/palomar-build-audit/lean-runtime
+
+OFFICIAL BUILD AND RESOURCE FACTS
+
+A. The candidate build command is direct.
+   scripts/verify_submission.py, solution-build block around lines 6422-6440:
+   sandboxed_run receives [str(lake), "build", solution_module]. There is no
+   serial helper, explicit thread argument, or job-count argument in this call.
+
+   Permanent source:
+   https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/scripts/verify_submission.py#L6422-L6440
+
+B. An outer LEAN_NUM_THREADS setting does not reach this build.
+   scripts/verify_submission.py, SANDBOX_ENVIRONMENT around lines 280-297,
+   does not list LEAN_NUM_THREADS. The supervisor command construction around
+   lines 2906-2912 passes only variables from that allowlist. The bubblewrap
+   construction around lines 3075 and 3101-3106 starts with env -i and restores
+   only the same allowlisted variables. Thus inheritance from the runner or
+   the caller workflow is deliberately insufficient.
+
+   Permanent sources:
+   https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/scripts/verify_submission.py#L280-L297
+   https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/scripts/verify_submission.py#L3050-L3115
+
+C. Other concurrency-looking settings concern different mechanisms.
+   - CON_RON_JOBS = 2, near lines 68-77 and used around lines 5196/5213,
+     controls the independent con-ron checker. It does not control Lake builds.
+   - The workflow concurrency group serializes/queues whole verification
+     requests with the same group. It does not serialize modules within a build.
+   - tasks_max = 32768 is translated to the cgroup pids.max resource limit.
+     It is not a reasonable module-build concurrency cap.
+   - permissive_resource_properties, around lines 435-445, installs memory,
+     task-count, file-descriptor and file-size limits. It does not install a
+     Lake job limit or a CPU quota for the candidate solution build.
+
+D. The official capacity differs from the local development machine.
+   verification-profile.json declares a minimum host memory of 15032385536
+   bytes (14 GiB) for the standard profile. execution-profiles.json selects
+   the Namespace 16x32 profile by default, with a minimum of 30064771072 bytes
+   (28 GiB); its runner label identifies the nominal 16-CPU/32-GB profile.
+   The larger approved profile has a minimum of 64424509440 bytes (60 GiB).
+   The resource policy uses 95%/98% of effective memory for high/max limits.
+   These capacity facts are not evidence of this project's actual peak usage.
+
+E. The cache policy describes fresh submitted .lake state, with pinned
+   Mathlib cache artifacts available when supported. Local prebuilt first-party
+   certificates must not be treated as a substitute for that fresh-build test.
+
+LEAN/LAKE SCHEDULING FACTS
+
+Paths below are relative to the installed source root identified above.
+
+F. Lake build jobs use Lean's task machinery.
+   lake/Lake/Build/Job/Monad.lean:
+   - Job.async, around lines 168-174, uses BaseIO.asTask with default priority.
+   - Job.mapM, around lines 221-234, uses BaseIO.mapTask.
+   lake/Lake/Build/Module.lean:
+   - Module.recBuildLean, around lines 1009-1026, schedules compilation after
+     the module's setup/dependencies through a job continuation.
+   - Module.buildLean, around lines 992-1004, passes the module's weak and
+     ordinary Lean arguments to compileLeanModule.
+   lake/Lake/Build/Actions.lean and lake/Lake/Util/Proc.lean route compilation
+   through an ordinary child process. Init/System/IO.lean, IO.Process.output
+   around lines 1544-1557, waits for that process while a dedicated task drains
+   stdout. These facts do not amount to a separately configurable Lake semaphore.
+
+G. The generated executable task manager has an environment-based default.
+   Lean/Compiler/LCNF/EmitC.lean, generated main around lines 1119-1133,
+   calls lean_init_task_manager before running main.
+   src/runtime/object.cpp, get_lean_num_threads/lean_init_task_manager around
+   lines 1095-1110, reads LEAN_NUM_THREADS if present, otherwise uses
+   hardware_concurrency(). The task_manager implementation uses this as its
+   ordinary worker budget; dedicated tasks and blocked-task handling are
+   separate mechanisms. This audit does not claim that the number is an exact
+   hard cap on every OS thread or every child process in all Lake operations.
+
+H. The Lean compiler has a separate thread option.
+   Lean/Shell.lean, defaultNumThreads around lines 221-226 and ShellOptions
+   around line 238, defaults to hardware concurrency. ShellOptions.process,
+   around lines 301-308, recognizes -j/--threads and sets numThreads.
+   src/util/shell.cpp, around line 353, initializes the compiler task manager
+   from those shell options. Consequently passing -j1 to a compiler is distinct
+   from reducing the Lake scheduler's worker budget.
+
+I. No supported TOML global job-count field was found in this release.
+   Inspected definitions:
+   - lake/Lake/Config/WorkspaceConfig.lean: WorkspaceConfig.
+   - lake/Lake/Config/PackageConfig.lean: PackageConfig, extending WorkspaceConfig
+     and LeanConfig.
+   - lake/Lake/Config/LeanConfig.lean: LeanConfig.
+   - lake/Lake/Build/Context.lean: BuildConfig, around lines 17-69.
+   - lake/Lake/Load/Toml.lean: declarative configuration decoding.
+   - lake/Lake/CLI/Help.lean: global and build CLI options.
+
+   None supplies a global jobs, maxJobs, or thread-pool-size setting for builds.
+   Do not invent one in lakefile.toml or assume that -Kjobs=1 has such a meaning.
+   This is a statement about the inspected standard configuration interface,
+   not a claim that arbitrary custom Lake programming could never alter a DAG.
+
+J. Supported per-compiler settings and their limits.
+   LeanConfig.lean around lines 168-180 documents moreLeanArgs and weakLeanArgs.
+   LeanLib.lean around lines 211-226 propagates both package and library values.
+   Thus a package-level moreLeanArgs = ["-j1"] or weakLeanArgs = ["-j1"] is a
+   supported way to select one compiler worker for this package's modules.
+   Dependency packages retain their own configurations.
+
+   moreLeanArgs participates in the module build trace; see Module.lean around
+   line 625. Changing it can invalidate local cached builds. weakLeanArgs is
+   expressly excluded from the build-result trace and comes before ordinary
+   arguments. This is a verified distinction, not a recommendation to change
+   the current configuration without a measured need. Neither field sets the
+   number of concurrently compiling modules.
+
+PROJECT-SPECIFIC ASSESSMENT
+
+The local helper visits local modules in dependency order and invokes one Lake
+module target at a time, then performs the ordinary final Lake target build.
+The final helper also sets LEAN_NUM_THREADS=1 for its own local subprocess
+environment, limiting Lake's ordinary worker pool. Individual Lean compiler
+thread counts remain governed by -j/--threads, as described in H above.
+This does not alter the official sandbox environment or workflow.
+It is a scheduling aid; the final build still uses Lake's own trace validation.
+Its existence does not change the official command in A.
+
+The certificate chunks are not all independent. For example, Chunk001 imports
+Chunk000 and subsequent chunks continue the dependency chain. Such imports
+serialize that certificate's chunks automatically. Separate seed and
+normalization branches can still build concurrently. No assertion is made
+that hundreds of certificate chunks will all run at once.
+
+The peak must be measured for the actual fresh target and runner. It cannot be
+reliably computed by multiplying one compiler's observed RSS by a guessed job
+count: dependency readiness, shared imported pages, compiler work, and the
+runner's effective resources matter. The existing observations justify keeping
+the fresh-build capacity question explicit; they do not establish inevitable
+OOM on the official profile.
+
+RECOMMENDED DISPOSITION
+
+Keep the current Lake configuration for now. There is no verified missing TOML
+job-cap option to add, and no official fresh-build failure has been established
+by this investigation. Retain the serial local helper for constrained machines
+and distinguish its successful final Lake build from a fresh official resource
+test. An official full run, or a correctly isolated fresh run with equivalent
+resources and unchanged verification policy, remains the relevant capacity
+evidence. Any later scheduler or dependency-layout change should be motivated
+by that evidence and must preserve all proof/checker requirements.
+
+RECOVERY UPDATE (2026-11-24, Asia/Shanghai)
+
+After the previous execution environment became unavailable, the verified
+source archive was restored into a fresh environment. The exact toolchain and
+3081 dependency-cache modules for the supplementary roots were restored.
+The package now uses weakLeanArgs = ["-j1"], a supported LeanConfig option
+confirmed again in the pinned Lake source. It limits each local compiler's
+worker count and does not limit Lake's number of concurrent module processes,
+does not propagate to dependency packages, and does not weaken proof checking.
+The supplementary closure is rebuilt by one Lake module target at a time.
+This later configuration change is separate from the original read-only audit
+above. No official full preflight or official fresh-build capacity pass is
+claimed by this recovery update.

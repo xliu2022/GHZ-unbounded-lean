@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "RigidGHZ.Growth.balanced_growth",
+    "RigidGHZ.Growth.balanced_growth_integer",
+    "RigidGHZ.Growth.prescribed_dimension",
+    "RigidGHZ.UpperBounds.unrestricted_harmonic_shadow",
+    "RigidGHZ.UpperBounds.balanced_partite_harmonic_bound",
+    "RigidGHZ.UpperBounds.unrestricted_floor_bound",
+    "RigidGHZ.UpperBounds.balanced_partite_floor_bound",
+    "RigidGHZ.UpperBounds.unrestricted_log_bound",
+    "RigidGHZ.UpperBounds.balanced_partite_log_bound"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

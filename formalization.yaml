@@ -1,0 +1,78 @@
+{
+  "version": "v0.4",
+  "project": {
+    "name": "Rigid hypergraphs for unbounded GHZ dimension",
+    "description": "Formalization of the principal mathematical results of Heng Li and Xizhi Liu, Unbounded GHZ dimension from fixed-order multiphoton sources. The current registration scope consists of three configurations selecting 20 theorems: quantitative rigid-hypergraph growth and prescribed dimension, harmonic and logarithmic upper bounds, the finite extrema f_3(9)=13, f_3(6)=10 and g_3(3)=6 with balanced uniqueness, and the connection to coherent source amplitudes, exact photon-number postselection, normalized GHZ states and optimal equal-weight success probability. Additional compiled supplementary families, finite seeds and threshold proofs are retained as an optional extension outside this registration scope. COVERAGE_AUDIT.md records exact coverage and alternative proofs; each selected Comparator configuration fixes its recorded declarations.",
+    "authors": [
+      "Xizhi Liu"
+    ],
+    "responsible_maintainers": [
+      "Xizhi Liu"
+    ],
+    "license": "Apache-2.0"
+  },
+  "classification": {
+    "arxiv": [
+      "math.CO",
+      "quant-ph"
+    ],
+    "msc2020": [
+      "05C65",
+      "05C70"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Unbounded GHZ dimension from fixed-order multiphoton sources",
+      "authors": [
+        "Heng Li",
+        "Xizhi Liu"
+      ],
+      "type": "paper",
+      "relationship": "formalizes",
+      "location": "paper/main.tex",
+      "note": "User-supplied manuscript. Alternate proof routes and exact scope are recorded in COVERAGE_AUDIT.md. No external publication identifier has been inferred."
+    },
+    {
+      "title": "Supplemental Material for Unbounded GHZ dimension from fixed-order multiphoton sources",
+      "authors": [
+        "Heng Li",
+        "Xizhi Liu"
+      ],
+      "type": "paper",
+      "relationship": "formalizes",
+      "location": "paper/supplement.tex",
+      "note": "User-supplied supplement. Supplementary finite examples, transfer systems, grafting/lift theorems and threshold tables are retained as an optional development outside the current three-configuration registration scope. Their compilation and replay status is recorded separately."
+    },
+    {
+      "title": "3-uniform hypergraphs with only disjoint perfect matchings: the author's thirteen-matching example",
+      "authors": [
+        "discrete_things"
+      ],
+      "type": "web discussion",
+      "relationship": "formalizes",
+      "location": "https://math.stackexchange.com/questions/4994589/3-uniform-hypergraphs-with-only-disjoint-perfect-matchings",
+      "note": "Original author's comment dated 2024-11-05 18:37. The exact list is independently proved 13-rigid and distinguished from the paper's algebraic example by a proved isomorphism invariant. See RigidGHZ/Finite/DiscreteThings2024/."
+    }
+  ],
+  "related_formalizations": [],
+  "automation": {
+    "notes": "Codex also assisted with repository packaging, metadata validation and the official mechanical-preflight setup. Human authorship and responsibility were explicitly supplied by Xizhi Liu. AI contributions are disclosed here rather than in the human author lists.",
+    "methods": [
+      {
+        "method": "agent",
+        "tool_setup": "ChatGPT with GPT-6 Astra Pro and collaborating agents, Lean 4, Lake and the pinned Mathlib revision",
+        "notes": "Substantive proof design and implementation, compilation-guided repairs, ordinary semantic bridges, coverage audit, and submission preparation. See PRODUCTION.md."
+      },
+      {
+        "method": "other",
+        "tool_setup": "CaDiCaL 2.1.2 LRAT generation and untrusted Python certificate generators",
+        "notes": "Finite proof search only. Ordinary Lean proof reconstruction and semantic clause checking provide the proof; solver responses are not axioms."
+      }
+    ]
+  },
+  "review": {
+    "status": "self-assessed",
+    "notes": "Automated development and coverage checks are documented in PRODUCTION.md and verification/. No human expert review or author verification has been recorded. Local diagnostics do not constitute Palomar full preflight, editorial review, or registration."
+  }
+}

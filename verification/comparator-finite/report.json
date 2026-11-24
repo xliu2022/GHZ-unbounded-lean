@@ -1,0 +1,48 @@
+{
+  "configuration": "comparator-finite.json",
+  "kind": "local-export-diagnostics",
+  "palomar_full_preflight": false,
+  "checks": [
+    {
+      "name": "build",
+      "returncode": 0,
+      "elapsed_seconds": 2.894,
+      "log": ".lake/verification/comparator-finite/build.log"
+    },
+    {
+      "name": "export-challenge",
+      "returncode": 0,
+      "elapsed_seconds": 6.527,
+      "log": ".lake/verification/comparator-finite/export-challenge.log"
+    },
+    {
+      "name": "export-solution",
+      "returncode": 0,
+      "elapsed_seconds": 380.66,
+      "log": ".lake/verification/comparator-finite/export-solution.log"
+    },
+    {
+      "name": "compare-and-axioms",
+      "returncode": 0,
+      "elapsed_seconds": 212.436,
+      "log": ".lake/verification/comparator-finite/compare-and-axioms.log"
+    },
+    {
+      "name": "lean-kernel",
+      "returncode": 0,
+      "elapsed_seconds": 1414.175,
+      "log": ".lake/verification/comparator-finite/lean-kernel.log"
+    },
+    {
+      "name": "nanoda",
+      "returncode": 0,
+      "elapsed_seconds": 884.331,
+      "log": ".lake/verification/comparator-finite/nanoda.log"
+    }
+  ],
+  "challenge_sha256": "e78fdfb0dff5bf01ffaf8ea16b0a301854115edd380aad6b68c8665f358fdc2d",
+  "challenge_bytes": 16857641,
+  "solution_sha256": "e41023d4fad89066ff5da77d69c719ccdf258f716a549def6e9def7383d6d615",
+  "solution_bytes": 1275167561,
+  "required_local_checks_passed": true
+}

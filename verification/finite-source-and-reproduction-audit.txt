@@ -1,0 +1,77 @@
+Finite theorem and certificate source audit
+
+Scope: source-level statement comparison, deterministic generator consistency,
+input coverage and SHA-256 verification. This supplements the successful Lean
+builds; it does not claim an independent kernel rerun or a fresh solver run.
+
+FiniteChallenge versus FiniteSolution
+- six_vertex_exact: attainment of 10 and universal bound for every ordinary
+  3-uniform H on Fin 6 and every natural d.
+- tripartite_three_exact: attainment of 6 on Fin 9 with a balanced coloring
+  into three parts of size 3; universal upper bound for every such H and d.
+- tripartite_three_unique: canonical Fin 3 x Fin 3 hypergraphs with every edge
+  transversal; the actual vertex equivalence preserves the first coordinate.
+- nine_vertex_exact: attainment of 13 and universal upper bound for every
+  ordinary 3-uniform H on Fin 9 and every natural d, without an upper cutoff.
+  The proof for d >= 14 restricts the actual prescribed family to 14 matchings
+  using RigidFamily.exists_restriction, then applies no_fourteen_on_nine.
+- Hypergraph, Uniform, PerfectMatching, RigidFamily, IsRigid, BalancedPartite,
+  tupleEdge, relabelEdge, relabelHypergraph, latinComplementGraph agree with
+  their implementation definitions. PerfectMatching quantifies over actual
+  vertices and actual edge membership; RigidFamily.complete quantifies over
+  all ordinary perfect matchings.
+- FiniteSolution does not import FiniteChallenge.
+- NormalizedNinePair uses explicit parentheses around the intended iff inside
+  the two non-equality hypotheses.
+
+Certificate reproducibility
+- All 162 distinct files consumed by include_str in Finite Lean sources exist
+  and are covered by a matching SHA-256 entry in the two certificate manifests.
+- Nine-vertex original CNF/metadata regeneration and dependency pruning from
+  the distributed raw LRAT files reproduce every compared file byte-for-byte.
+  The six pruned refutations contain 59,072 retained RUP steps.
+- Supplementary table extraction from paper/supplement.tex reproduces the
+  distributed 19-seed seeds.json byte-for-byte.
+- The supplementary generator recreates 275 Lean data/facts/proof modules
+  byte-for-byte from the retained, already checked core certificates.
+- Regenerated supplementary original inputs and direct LRAT trace chunks
+  match byte-for-byte. The 19 seeds use 126,630 retained RUP steps.
+- Normalized affine cases are A29, A31, A41, A47. Default solve/prune/lean-proof
+  skip those base cases; normalize handles their proved branches. No removed
+  unnormalized candidate is required by the default commands.
+- The external SAT solver was not rerun for this consistency check. Acceptance
+  relies on the ordinary Lean proof terms reconstructed from the retained RUP
+  traces, and the proved semantic bridge to actual perfect matchings.
+
+Source hygiene
+- 493 Finite Lean source files, maximum 1,639 physical lines per file.
+- Every Finite Lean source has a module header.
+- No sorry, native_decide, Lean.ofReduceBool, or axiomDecl token occurs in
+  Finite Lean sources. Challenge holes are intentionally in separate files.
+- Unused unnormalized affine proof modules and full raw affine solver traces
+  are outside the distributed project. ExactCoverCertificates is about 31.5 MB.
+- scripts/build_finite_certificates.py serializes the independent large checks.
+
+Proof audit logs
+- verification/finite-axioms-complete.txt
+- verification/supplement-finite-axioms.txt
+Both completed audits admit only propext, Classical.choice, and Quot.sound.
+
+Mathematical scope
+The numerical f3(9)=13 theorem is proved by a normalized finite refutation.
+The normal-form and extension argument of Appendix B is replaced by an
+alternative ordinary-graph proof. Claim B.1 has a separate formalization in
+FivePairRelabel.lean; see COVERAGE_AUDIT.md for the precise lemma coverage. S6 includes all five exact maximum pair-codegree results
+(4,4,4,4,3), edge counts (48,50,78,70,80), and ordinary matching completeness.
+
+2024 comparison addendum
+The exact thirteen matching rows from discrete_things's own MSE comment
+(2024-11-05 18:37, question 4994589) have been transcribed with labels minus one.
+Source data, provenance, and SHA-256 are in Finite/DiscreteThings2024/.
+NineDiscreteThings.lean independently proves that their ordinary union is
+13-rigid. NineNonisomorphism.lean proves an isomorphism-invariant count of
+actual hyperedges whose three pairs all have codegree four. The count is
+3 for the paper's table and actual affine-plane graph, but 2 for the 2024
+example, so no vertex equivalence carries either paper graph to that example.
+Both modules compiled successfully; six selected proof dependencies passed
+the standard-three-axiom audit in verification/nine-nonisomorphism-axioms.txt.

@@ -1,0 +1,358 @@
+[
+  {
+    "seed": "U12",
+    "vertices": 12,
+    "prescribed_matchings": 12,
+    "edges": 48,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "U12",
+        "initial_clauses": 661,
+        "rup_steps": 188
+      }
+    ]
+  },
+  {
+    "seed": "U15",
+    "vertices": 15,
+    "prescribed_matchings": 10,
+    "edges": 50,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "U15",
+        "initial_clauses": 575,
+        "rup_steps": 161
+      }
+    ]
+  },
+  {
+    "seed": "U18",
+    "vertices": 18,
+    "prescribed_matchings": 13,
+    "edges": 78,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "U18",
+        "initial_clauses": 1266,
+        "rup_steps": 749
+      }
+    ]
+  },
+  {
+    "seed": "U21",
+    "vertices": 21,
+    "prescribed_matchings": 10,
+    "edges": 70,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "U21",
+        "initial_clauses": 877,
+        "rup_steps": 533
+      }
+    ]
+  },
+  {
+    "seed": "U24",
+    "vertices": 24,
+    "prescribed_matchings": 10,
+    "edges": 80,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "U24",
+        "initial_clauses": 1023,
+        "rup_steps": 907
+      }
+    ]
+  },
+  {
+    "seed": "A3",
+    "vertices": 9,
+    "prescribed_matchings": 3,
+    "edges": 9,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A3",
+        "initial_clauses": 17,
+        "rup_steps": 8
+      }
+    ]
+  },
+  {
+    "seed": "A5",
+    "vertices": 15,
+    "prescribed_matchings": 4,
+    "edges": 20,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A5",
+        "initial_clauses": 60,
+        "rup_steps": 16
+      }
+    ]
+  },
+  {
+    "seed": "A7",
+    "vertices": 21,
+    "prescribed_matchings": 4,
+    "edges": 28,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A7",
+        "initial_clauses": 87,
+        "rup_steps": 30
+      }
+    ]
+  },
+  {
+    "seed": "A11",
+    "vertices": 33,
+    "prescribed_matchings": 5,
+    "edges": 55,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A11",
+        "initial_clauses": 342,
+        "rup_steps": 121
+      }
+    ]
+  },
+  {
+    "seed": "A13",
+    "vertices": 39,
+    "prescribed_matchings": 6,
+    "edges": 78,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A13",
+        "initial_clauses": 630,
+        "rup_steps": 786
+      }
+    ]
+  },
+  {
+    "seed": "A17",
+    "vertices": 51,
+    "prescribed_matchings": 5,
+    "edges": 85,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A17",
+        "initial_clauses": 565,
+        "rup_steps": 600
+      }
+    ]
+  },
+  {
+    "seed": "A19",
+    "vertices": 57,
+    "prescribed_matchings": 6,
+    "edges": 114,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A19",
+        "initial_clauses": 918,
+        "rup_steps": 3833
+      }
+    ]
+  },
+  {
+    "seed": "A23",
+    "vertices": 69,
+    "prescribed_matchings": 6,
+    "edges": 138,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A23",
+        "initial_clauses": 1110,
+        "rup_steps": 7368
+      }
+    ]
+  },
+  {
+    "seed": "A29",
+    "vertices": 87,
+    "prescribed_matchings": 6,
+    "edges": 174,
+    "normalized": true,
+    "certificates": [
+      {
+        "case": "A29Case0",
+        "initial_clauses": 1214,
+        "rup_steps": 21014
+      },
+      {
+        "case": "A29Case1",
+        "initial_clauses": 871,
+        "rup_steps": 1746
+      },
+      {
+        "case": "A29Case2",
+        "initial_clauses": 424,
+        "rup_steps": 99
+      },
+      {
+        "case": "A29Case3",
+        "initial_clauses": 188,
+        "rup_steps": 80
+      },
+      {
+        "case": "A29Case4",
+        "initial_clauses": 132,
+        "rup_steps": 67
+      },
+      {
+        "case": "A29Case5",
+        "initial_clauses": 129,
+        "rup_steps": 69
+      }
+    ]
+  },
+  {
+    "seed": "A31",
+    "vertices": 93,
+    "prescribed_matchings": 6,
+    "edges": 186,
+    "normalized": true,
+    "certificates": [
+      {
+        "case": "A31Case0",
+        "initial_clauses": 1309,
+        "rup_steps": 49621
+      },
+      {
+        "case": "A31Case1",
+        "initial_clauses": 940,
+        "rup_steps": 2166
+      },
+      {
+        "case": "A31Case2",
+        "initial_clauses": 573,
+        "rup_steps": 179
+      },
+      {
+        "case": "A31Case3",
+        "initial_clauses": 225,
+        "rup_steps": 32
+      },
+      {
+        "case": "A31Case4",
+        "initial_clauses": 136,
+        "rup_steps": 77
+      },
+      {
+        "case": "A31Case5",
+        "initial_clauses": 140,
+        "rup_steps": 79
+      }
+    ]
+  },
+  {
+    "seed": "A37",
+    "vertices": 111,
+    "prescribed_matchings": 5,
+    "edges": 185,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A37",
+        "initial_clauses": 1226,
+        "rup_steps": 8099
+      }
+    ]
+  },
+  {
+    "seed": "A41",
+    "vertices": 123,
+    "prescribed_matchings": 5,
+    "edges": 205,
+    "normalized": true,
+    "certificates": [
+      {
+        "case": "A41Case0",
+        "initial_clauses": 1240,
+        "rup_steps": 8625
+      },
+      {
+        "case": "A41Case1",
+        "initial_clauses": 807,
+        "rup_steps": 442
+      },
+      {
+        "case": "A41Case2",
+        "initial_clauses": 384,
+        "rup_steps": 69
+      },
+      {
+        "case": "A41Case3",
+        "initial_clauses": 155,
+        "rup_steps": 84
+      },
+      {
+        "case": "A41Case4",
+        "initial_clauses": 166,
+        "rup_steps": 101
+      }
+    ]
+  },
+  {
+    "seed": "A43",
+    "vertices": 129,
+    "prescribed_matchings": 5,
+    "edges": 215,
+    "normalized": false,
+    "certificates": [
+      {
+        "case": "A43",
+        "initial_clauses": 1424,
+        "rup_steps": 8673
+      }
+    ]
+  },
+  {
+    "seed": "A47",
+    "vertices": 141,
+    "prescribed_matchings": 5,
+    "edges": 235,
+    "normalized": true,
+    "certificates": [
+      {
+        "case": "A47Case0",
+        "initial_clauses": 1438,
+        "rup_steps": 8247
+      },
+      {
+        "case": "A47Case1",
+        "initial_clauses": 970,
+        "rup_steps": 1470
+      },
+      {
+        "case": "A47Case2",
+        "initial_clauses": 465,
+        "rup_steps": 69
+      },
+      {
+        "case": "A47Case3",
+        "initial_clauses": 187,
+        "rup_steps": 109
+      },
+      {
+        "case": "A47Case4",
+        "initial_clauses": 194,
+        "rup_steps": 113
+      }
+    ]
+  }
+]

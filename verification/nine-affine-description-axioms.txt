@@ -1,0 +1,21 @@
+Nine-affine-description axiom audit
+2026-11-23 16:40:04 UTC
+Command: lake env lean -j1 -M4000 verification/NineAffineDescriptionAxioms.lean
+Exit status: 0
+Elapsed seconds: 3.35
+
+'RigidGHZ.Finite.zeroParallelMatching_perfect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.zeroParallelFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.sumClass_zero_matchings_eq_parallelClasses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.sumClass_zero_perfect_iff_parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.affineLine_disjoint_iff_parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.affineParallelClass_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.sumClass_nonzero_eq_translates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.translateEdge_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.nonzero_sum_difference_set' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.nonzero_translates_disjoint_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.sumClass_nonzero_matchings_eq_cosets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.translates_perfect_iff_vector_coset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.nonzeroCosetFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.sumTriangle_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.sumClass_rigid' depends on axioms: [propext, Classical.choice, Quot.sound]

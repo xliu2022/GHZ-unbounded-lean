@@ -1,0 +1,48 @@
+{
+  "configuration": "comparator-physics.json",
+  "kind": "local-export-diagnostics",
+  "palomar_full_preflight": false,
+  "checks": [
+    {
+      "name": "build",
+      "returncode": 0,
+      "elapsed_seconds": 8.096,
+      "log": ".lake/verification/comparator-physics/build.log"
+    },
+    {
+      "name": "export-challenge",
+      "returncode": 0,
+      "elapsed_seconds": 9.727,
+      "log": ".lake/verification/comparator-physics/export-challenge.log"
+    },
+    {
+      "name": "export-solution",
+      "returncode": 0,
+      "elapsed_seconds": 8.363,
+      "log": ".lake/verification/comparator-physics/export-solution.log"
+    },
+    {
+      "name": "compare-and-axioms",
+      "returncode": 0,
+      "elapsed_seconds": 8.515,
+      "log": ".lake/verification/comparator-physics/compare-and-axioms.log"
+    },
+    {
+      "name": "lean-kernel",
+      "returncode": 0,
+      "elapsed_seconds": 24.387,
+      "log": ".lake/verification/comparator-physics/lean-kernel.log"
+    },
+    {
+      "name": "nanoda",
+      "returncode": 0,
+      "elapsed_seconds": 6.589,
+      "log": ".lake/verification/comparator-physics/nanoda.log"
+    }
+  ],
+  "challenge_sha256": "241fab86945d39b09a1733730537452a94fb99bab1b4343aa9fbdd2c24810e84",
+  "challenge_bytes": 72833590,
+  "solution_sha256": "d84143c059e50b773bb4bb5beb3b633b54285958c897c9c298ff867887378d9c",
+  "solution_bytes": 131312471,
+  "required_local_checks_passed": true
+}

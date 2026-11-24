@@ -1,0 +1,78 @@
+{
+  "kind": "local-source-preparation-check",
+  "palomar_full_preflight": false,
+  "source_bytes": 75695076,
+  "regular_files": 1176,
+  "lean_files": 817,
+  "maximum_lean_lines": 1639,
+  "challenge_placeholders": 37,
+  "proof_source_scan": "lexical; supplemented by kernel and axiom-closure checks",
+  "configurations": [
+    {
+      "path": "comparator-finite.json",
+      "theorems": [
+        "RigidGHZ.Finite.nine_vertex_exact",
+        "RigidGHZ.Finite.six_vertex_exact",
+        "RigidGHZ.Finite.tripartite_three_exact",
+        "RigidGHZ.Finite.tripartite_three_unique"
+      ],
+      "definitions": []
+    },
+    {
+      "path": "comparator-physics.json",
+      "theorems": [
+        "RigidGHZ.SourceModel.ghz_growth_quantitative",
+        "RigidGHZ.SourceModel.ghz_growth",
+        "RigidGHZ.SourceModel.joint_binary_state_normalized",
+        "RigidGHZ.SourceModel.postselectedState_support_iff_isRigid",
+        "RigidGHZ.SourceModel.equal_magnitude_phase_correction",
+        "RigidGHZ.SourceModel.optimal_binary_success_probability",
+        "RigidGHZ.SourceModel.optimal_binary_success_attained"
+      ],
+      "definitions": []
+    },
+    {
+      "path": "comparator-supplement.json",
+      "theorems": [
+        "RigidGHZ.Supplement.six_at_every_size",
+        "RigidGHZ.Supplement.six_general",
+        "RigidGHZ.Supplement.Affine.eight_odd",
+        "RigidGHZ.Supplement.Periodic.eleven_bounded",
+        "RigidGHZ.Supplement.Periodic.ten_bounded",
+        "RigidGHZ.Supplement.Periodic.latin_bounded",
+        "RigidGHZ.Supplement.Thresholds.ten_threshold_sharp",
+        "RigidGHZ.Supplement.Thresholds.balanced_eight",
+        "RigidGHZ.Supplement.Thresholds.balanced_ten",
+        "RigidGHZ.Supplement.Thresholds.balanced_twelve",
+        "RigidGHZ.Supplement.Thresholds.unrestricted_twelve",
+        "RigidGHZ.Supplement.LinearThresholds.linear_thresholds",
+        "RigidGHZ.Finite.Seeds.U12.witness",
+        "RigidGHZ.Finite.Seeds.U15.witness",
+        "RigidGHZ.Finite.Seeds.U18.witness",
+        "RigidGHZ.Finite.Seeds.U21.witness",
+        "RigidGHZ.Finite.Seeds.U24.witness"
+      ],
+      "definitions": []
+    },
+    {
+      "path": "comparator.json",
+      "theorems": [
+        "RigidGHZ.Growth.balanced_growth",
+        "RigidGHZ.Growth.balanced_growth_integer",
+        "RigidGHZ.Growth.prescribed_dimension",
+        "RigidGHZ.UpperBounds.unrestricted_harmonic_shadow",
+        "RigidGHZ.UpperBounds.balanced_partite_harmonic_bound",
+        "RigidGHZ.UpperBounds.unrestricted_floor_bound",
+        "RigidGHZ.UpperBounds.balanced_partite_floor_bound",
+        "RigidGHZ.UpperBounds.unrestricted_log_bound",
+        "RigidGHZ.UpperBounds.balanced_partite_log_bound"
+      ],
+      "definitions": []
+    }
+  ],
+  "warnings": [
+    "Challenge exceeds advisory size: PhysicsChallenge.lean (395 lines, 16061 bytes)"
+  ],
+  "failures": [],
+  "passed": true
+}

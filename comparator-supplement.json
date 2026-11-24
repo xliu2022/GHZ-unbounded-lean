@@ -1,0 +1,26 @@
+{
+  "challenge_module": "SupplementChallenge",
+  "solution_module": "SupplementSolution",
+  "theorem_names": [
+    "RigidGHZ.Supplement.six_at_every_size",
+    "RigidGHZ.Supplement.six_general",
+    "RigidGHZ.Supplement.Affine.eight_odd",
+    "RigidGHZ.Supplement.Periodic.eleven_bounded",
+    "RigidGHZ.Supplement.Periodic.ten_bounded",
+    "RigidGHZ.Supplement.Periodic.latin_bounded",
+    "RigidGHZ.Supplement.Thresholds.ten_threshold_sharp",
+    "RigidGHZ.Supplement.Thresholds.balanced_eight",
+    "RigidGHZ.Supplement.Thresholds.balanced_ten",
+    "RigidGHZ.Supplement.Thresholds.balanced_twelve",
+    "RigidGHZ.Supplement.Thresholds.unrestricted_twelve",
+    "RigidGHZ.Supplement.LinearThresholds.linear_thresholds",
+    "RigidGHZ.Finite.Seeds.U12.witness",
+    "RigidGHZ.Finite.Seeds.U15.witness",
+    "RigidGHZ.Finite.Seeds.U18.witness",
+    "RigidGHZ.Finite.Seeds.U21.witness",
+    "RigidGHZ.Finite.Seeds.U24.witness"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

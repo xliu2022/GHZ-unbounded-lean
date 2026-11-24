@@ -1,0 +1,12 @@
+module
+
+public import RigidGHZ.Finite.LRAT7.Chunk000
+
+/-! Kernel reconstruction of learned clauses 500 through 999. -/
+@[expose] public section
+namespace RigidGHZ.Finite
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+kernel_lrat_chunk nineUnsat7 (include_str "../Certificates/core7.cnf")
+  (include_str "../Certificates/core7.lrat") 500 1000
+end RigidGHZ.Finite

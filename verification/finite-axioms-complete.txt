@@ -1,0 +1,4 @@
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.thirteen_rigid: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.six_vertex_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.nine_vertex_exact: [propext, Classical.choice, Quot.sound]
+info: RigidGHZ/Finite/AxiomAudit.lean:14:0: RigidGHZ.Finite.balanced_tripartite_three_unique: [propext, Classical.choice, Quot.sound]

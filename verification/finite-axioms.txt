@@ -1,0 +1,4 @@
+'RigidGHZ.Finite.thirteen_rigid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.six_vertex_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.six_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Finite.tripartite_three_upper' depends on axioms: [propext, Classical.choice, Quot.sound]

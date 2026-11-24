@@ -1,0 +1,48 @@
+{
+  "configuration": "comparator.json",
+  "kind": "local-export-diagnostics",
+  "palomar_full_preflight": false,
+  "checks": [
+    {
+      "name": "build",
+      "returncode": 0,
+      "elapsed_seconds": 9.47,
+      "log": ".lake/verification/comparator/build.log"
+    },
+    {
+      "name": "export-challenge",
+      "returncode": 0,
+      "elapsed_seconds": 24.256,
+      "log": ".lake/verification/comparator/export-challenge.log"
+    },
+    {
+      "name": "export-solution",
+      "returncode": 0,
+      "elapsed_seconds": 20.569,
+      "log": ".lake/verification/comparator/export-solution.log"
+    },
+    {
+      "name": "compare-and-axioms",
+      "returncode": 0,
+      "elapsed_seconds": 15.548,
+      "log": ".lake/verification/comparator/compare-and-axioms.log"
+    },
+    {
+      "name": "lean-kernel",
+      "returncode": 0,
+      "elapsed_seconds": 57.084,
+      "log": ".lake/verification/comparator/lean-kernel.log"
+    },
+    {
+      "name": "nanoda",
+      "returncode": 0,
+      "elapsed_seconds": 38.162,
+      "log": ".lake/verification/comparator/nanoda.log"
+    }
+  ],
+  "challenge_sha256": "e0a1c46f64c806a3ee6c6fa47f3d90beab5d5977e2f2191891f753077c8613f3",
+  "challenge_bytes": 72331854,
+  "solution_sha256": "7913ff91bafb2b0a0ce976798c09ce19c427af22860fc2a99c34dd524fe10e47",
+  "solution_bytes": 302805313,
+  "required_local_checks_passed": true
+}

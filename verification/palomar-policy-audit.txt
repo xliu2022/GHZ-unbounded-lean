@@ -1,0 +1,113 @@
+Palomar policy and preparation audit
+Checked: 2026-11-23 UTC
+
+Scope: read-only official-source and local-format checks. No Lean build,
+Palomar workflow run, submission, publication, editorial review, or registration
+was performed by this audit. This is not a full-preflight pass.
+
+1. Immutable official revisions
+
+Official read-only commands (both completed successfully):
+  git ls-remote https://github.com/PalomarRegistry/PalomarSubmission.git refs/heads/main
+  14aa8d6b3c2f14a8540605e37144560b9a00e7e7  refs/heads/main
+  git ls-remote https://github.com/PalomarRegistry/PalomarPolicy.git refs/heads/main
+  28bd48b9b71bbb2a82c718ce761d5a4220ef8e60  refs/heads/main
+
+GitHub commit/API pages were unavailable in the web lookup tool. The official
+Git ref query succeeded, and the files below were fetched successfully from
+raw.githubusercontent.com using those exact immutable commits. No SHA was guessed.
+
+Official source URLs:
+  https://github.com/PalomarRegistry/PalomarPolicy/blob/28bd48b9b71bbb2a82c718ce761d5a4220ef8e60/CONTRIBUTING.md
+  https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/toolchains.json
+  https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/formalization-profile.json
+  https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/verification-profile.json
+  https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/.github/workflows/submission.yml
+  https://github.com/PalomarRegistry/PalomarSubmission/blob/14aa8d6b3c2f14a8540605e37144560b9a00e7e7/scripts/submission_contract.py
+
+2. Version and format findings
+
+- toolchains.json schema_version=2; minimum=v4.35.0-rc2.
+- formalization-profile.json schema_version=4; metadata format v0.4.
+- This project and its resolved Mathlib checkout both use leanprover/lean4:v4.35.0-rc2.
+  The project meets the current minimum; the release-candidate suffix matches.
+- README mentions of 4.35.0-rc4, 4.35.0 and 4.36.0-rc1 concern Verso rendering
+  backports, not a higher submission minimum.
+- All four Comparator JSON files have the permitted fields, valid distinct
+  module names, nonempty theorem_names and only the three permitted axioms.
+  Each configuration corresponds to a separate potential Palomar entry.
+- Challenge sizes: main 165 lines/7,358 bytes; finite 99/4,359;
+  supplement 198/8,578; physics 395/16,061. All satisfy 1,000 lines/100 KiB.
+  Physics exceeds the 300-line warning threshold, not a hard limit.
+- Each Challenge imports Mathlib only; all nine manifest packages have public
+  GitHub URLs and resolved lowercase 40-character commit SHAs.
+- One root LICENSE identifies Apache-2.0 and matches metadata. Licensee was
+  not run in this audit. The source tree excluding build state is about 75.35 MB;
+  no compiled output outside build state, source symlinks, Git LFS pointers,
+  or regular Lean files above 10,000 lines were found.
+
+3. Actual metadata diagnostics
+
+The unmodified official load_formalization_metadata function from the pinned
+PalomarSubmission commit was run locally against formalization.yaml.in, with
+its pinned taxonomy snapshots. It reported exactly these two field errors:
+  formalization.yaml field project.authors must be a nonempty list
+  formalization.yaml field project.responsible_maintainers must be a nonempty list
+All other fields passed that metadata function, including classifications,
+sources, agent/other automation disclosure and self-assessed review status.
+The human names remain intentionally empty. No person or permission was inferred.
+The final basename formalization.yaml is still absent; the template must be
+finalized with truthful human names before an official run. This local metadata
+function does not check the public repository/commit, licensing detector,
+sandboxed build, canonical Challenge closure, proof replay or publication.
+
+4. Prepared workflow inputs
+
+The actual .github/workflows/palomar-preflight.yml was compared with the
+pinned official workflow_call interface. Its seven with keys are supported:
+  repository, commit, pipeline_commit, request_id, mode, execution_profile, options.
+All required keys are present. uses and pipeline_commit contain the same SHA:
+  14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+The request id ghzprefl0001 has exactly 12 lowercase alphanumeric characters.
+mode=full and execution_profile=palomar-standard-v1 are correct for the caller.
+options supplies comparator_config_path and an explicitly entered authorization
+relationship. The workflow has not been dispatched.
+
+Official authorization_relationship strings (choose truthfully; none selected):
+  I am a responsible author or maintainer  [maintainer]
+  I have approval from a responsible author or maintainer  [approved]
+  I am a Palomar Technical Maintainer testing the workflow  [technical-test]
+  Palomar is making an exceptional registry metadata correction  [palomar-maintainer]
+The last two entries describe Palomar operator roles, not ordinary submitter roles.
+The author/maintainer or approval declaration must come from the responsible person.
+
+5. Official standard execution profile
+
+Profile id: palomar-standard-v1; schema_version=1.
+Runner: GitHub-hosted ubuntu-24.04, x86_64.
+Execution budget: 19,800 seconds = 330 minutes = 5.5 hours.
+Whole job timeout: 350 minutes.
+Minimum effective host memory: 15,032,385,536 bytes = 14 GiB.
+Memory pressure threshold: 95%; ceiling: 98% of effective host memory.
+Minimum free workspace: 21,474,836,480 bytes = 20 GiB.
+Tasks maximum: 32,768; open files: 1,048,576; per-file maximum: 1 TiB.
+No fixed CPU count is imposed by the standard profile.
+Canonical profile digest: eb97b7b548c5d016967434818f0ed48a215e7fdc15528f564ab21ff2927cfd69
+Local effective memory observed during this audit: 10451427328 bytes.
+This is below the standard profile minimum; local manual proof checks therefore
+must not be presented as having run the official execution profile.
+The larger Palomar-operated Namespace profiles use a different runner policy;
+the prepared user-owned workflow deliberately selects the documented standard profile.
+
+6. SHA-256 of fetched official files
+
+86865671b28515a9ba79202eec0c58dadd23dc6d832532bc01a8cdeb845ea401  PalomarPolicy/CONTRIBUTING.md
+fd40347e4b586e7c42233b35f11efb006d25033b9a7ded9565719edf7aa98354  PalomarSubmission/toolchains.json
+d695b838bbab69236f6e43afda6bd4d719a91099412351f89c3c2cfeb26d5131  PalomarSubmission/formalization-profile.json
+10d97d59e223c3378d4b96601260f26fec1b27d4fd94739bc06a63ec3bab9c17  PalomarSubmission/.github/workflows/submission.yml
+264b7da57bd099b7cd4da15b580b32978671a60b8b396c60920f584176224cc3  PalomarSubmission/scripts/submission_contract.py
+94fcd7906a1b6c076c0036d742e1c5add8625e49bb474818ec8924576dbf0caa  PalomarSubmission/verification-profile.json
+013ce5734e68f42bbd446bc3f8dd0288172b7ed7bd3078ef3332cbce9ab56e6f  PalomarSubmission/scripts/verification_profile.py
+7bef8cba4402f3d1e7324d501fdcbda44ece376fcdc98ea4c4ca945cca731bf4  PalomarSubmission/execution-profiles.json
+3b339cf140a914c50bab39b1c44df2437ce3984bd09bb2150fcb0edd60eda776  PalomarSubmission/taxonomies/arxiv-categories.json
+b4de69f1f562da01e0f4580cecc0ab36098f5297bb7cdd669c8ec3b0d3606060  PalomarSubmission/taxonomies/msc2020-codes.json

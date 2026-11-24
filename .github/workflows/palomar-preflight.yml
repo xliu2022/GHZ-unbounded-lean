@@ -1,0 +1,38 @@
+name: Palomar full mechanical preflight
+run-name: Palomar preflight — ${{ inputs.comparator_config_path }}
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      comparator_config_path:
+        description: The exact statement configuration to check
+        required: true
+        type: choice
+        options:
+          - comparator.json
+          - comparator-finite.json
+          - comparator-physics.json
+      authorization_relationship:
+        description: Supply the truthful relationship accepted by Palomar
+        required: true
+        type: string
+      request_id:
+        description: Exactly twelve lowercase alphanumeric characters
+        required: true
+        default: ghzprefl0001
+        type: string
+
+jobs:
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.sha }}
+      pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+      request_id: ${{ inputs.request_id }}
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: ${{ format('{{"comparator_config_path":{0},"authorization_relationship":{1}}}', toJSON(inputs.comparator_config_path), toJSON(inputs.authorization_relationship)) }}

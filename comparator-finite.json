@@ -1,0 +1,13 @@
+{
+  "challenge_module": "FiniteChallenge",
+  "solution_module": "FiniteSolution",
+  "theorem_names": [
+    "RigidGHZ.Finite.nine_vertex_exact",
+    "RigidGHZ.Finite.six_vertex_exact",
+    "RigidGHZ.Finite.tripartite_three_exact",
+    "RigidGHZ.Finite.tripartite_three_unique"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

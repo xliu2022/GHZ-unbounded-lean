@@ -1,0 +1,47 @@
+{
+  "kind": "publication-preparation-check",
+  "checked_date": "2026-11-24",
+  "palomar_full_preflight": false,
+  "repository": "xliu2022/GHZ-unbounded-lean",
+  "pipeline_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+  "author": [
+    "Xizhi Liu"
+  ],
+  "responsible_maintainers": [
+    "Xizhi Liu"
+  ],
+  "metadata": {
+    "validator": "scripts.submission_contract.load_formalization_metadata",
+    "validator_sha256": "264b7da57bd099b7cd4da15b580b32978671a60b8b396c60920f584176224cc3",
+    "metadata_sha256": "1f2e69cb308dde649a7948b6527424fd02a816a38e3cd184b5fb2e9640af063a",
+    "passed": true
+  },
+  "official_source_inspection": {
+    "schema_version": 1,
+    "module_required": true,
+    "maximum_lines": 10000,
+    "files_checked": 817
+  },
+  "workflow_interface": {
+    "passed": true,
+    "mode": "full",
+    "execution_profile": "palomar-standard-v1"
+  },
+  "primary_proof_sources": {
+    "checked": 303,
+    "checkpoint_hash_mismatches": []
+  },
+  "yaml_package": {
+    "version": "6.0.3",
+    "wheel": "pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+    "sha256": "b8bb0864c5a28024fac8a632c443c87c5aa6f215c0b126c449ae1a150412f31d",
+    "verification": "download accepted by the pinned official requirements.txt hash allowlist; portable Python loader used on macOS"
+  },
+  "layout_references": [
+    "xliu2022/improved-sidorenko-lean",
+    "xliu2022/sharp-tail-matching-lean",
+    "xliu2022/transcendental-turan-lean"
+  ],
+  "scope": "Metadata, source layout and workflow interface only. Official full mechanical preflight is recorded separately by GitHub Actions.",
+  "passed": true
+}

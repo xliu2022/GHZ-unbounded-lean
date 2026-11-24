@@ -1,0 +1,820 @@
+{
+  "kind": "recovery-supplement-closure-build",
+  "palomar_full_preflight": false,
+  "roots": [
+    "SupplementSolution",
+    "SupplementChallenge"
+  ],
+  "local_modules": 397,
+  "targets": [
+    {
+      "name": "RigidGHZ.Basic",
+      "returncode": 0,
+      "seconds": 5.283
+    },
+    {
+      "name": "RigidGHZ.Finite.ThreeEdgeCertificate",
+      "returncode": 0,
+      "seconds": 3.712
+    },
+    {
+      "name": "RigidGHZ.Partite",
+      "returncode": 0,
+      "seconds": 4.2
+    },
+    {
+      "name": "RigidGHZ.Finite.TripartiteSix",
+      "returncode": 0,
+      "seconds": 22.853
+    },
+    {
+      "name": "RigidGHZ.Finite.RowChoiceCertificate",
+      "returncode": 0,
+      "seconds": 3.818
+    },
+    {
+      "name": "RigidGHZ.UpperBounds.Exchange",
+      "returncode": 0,
+      "seconds": 3.755
+    },
+    {
+      "name": "RigidGHZ.UpperBounds.Reciprocal",
+      "returncode": 0,
+      "seconds": 4.056
+    },
+    {
+      "name": "RigidGHZ.UpperBounds.FiniteAverage",
+      "returncode": 0,
+      "seconds": 3.541
+    },
+    {
+      "name": "RigidGHZ.UpperBounds.ShadowCombinatorics",
+      "returncode": 0,
+      "seconds": 3.644
+    },
+    {
+      "name": "RigidGHZ.Supplement.SixSeeds",
+      "returncode": 0,
+      "seconds": 27.787
+    },
+    {
+      "name": "RigidGHZ.Relabel",
+      "returncode": 0,
+      "seconds": 3.984
+    },
+    {
+      "name": "RigidGHZ.Construction.CyclicBaseline",
+      "returncode": 0,
+      "seconds": 3.822
+    },
+    {
+      "name": "RigidGHZ.Supplement.Doubling",
+      "returncode": 0,
+      "seconds": 6.121
+    },
+    {
+      "name": "RigidGHZ.Supplement.GraftData",
+      "returncode": 0,
+      "seconds": 4.626
+    },
+    {
+      "name": "RigidGHZ.Supplement.GraftMatchings",
+      "returncode": 0,
+      "seconds": 3.916
+    },
+    {
+      "name": "RigidGHZ.Supplement.PartitePartial",
+      "returncode": 0,
+      "seconds": 3.805
+    },
+    {
+      "name": "RigidGHZ.Supplement.GraftProjection",
+      "returncode": 0,
+      "seconds": 4.158
+    },
+    {
+      "name": "RigidGHZ.Supplement.GraftComplete",
+      "returncode": 0,
+      "seconds": 3.598
+    },
+    {
+      "name": "RigidGHZ.Supplement.GraftDegrees",
+      "returncode": 0,
+      "seconds": 3.968
+    },
+    {
+      "name": "RigidGHZ.Supplement.DegreeRelabel",
+      "returncode": 0,
+      "seconds": 3.306
+    },
+    {
+      "name": "RigidGHZ.RelabelGround",
+      "returncode": 0,
+      "seconds": 3.541
+    },
+    {
+      "name": "RigidGHZ.Supplement.GraftBalanced",
+      "returncode": 0,
+      "seconds": 3.878
+    },
+    {
+      "name": "RigidGHZ.Supplement.Grafting",
+      "returncode": 0,
+      "seconds": 4.037
+    },
+    {
+      "name": "RigidGHZ.Supplement.GraftSemigroup",
+      "returncode": 0,
+      "seconds": 3.88
+    },
+    {
+      "name": "RigidGHZ.Supplement.SixAll",
+      "returncode": 0,
+      "seconds": 3.959
+    },
+    {
+      "name": "RigidGHZ.Supplement.MarkedCounts",
+      "returncode": 0,
+      "seconds": 2.779
+    },
+    {
+      "name": "RigidGHZ.Supplement.AffineSeed",
+      "returncode": 0,
+      "seconds": 4.271
+    },
+    {
+      "name": "RigidGHZ.Finite.SatKernel",
+      "returncode": 0,
+      "seconds": 4.331
+    },
+    {
+      "name": "RigidGHZ.Finite.ExactCoverSAT",
+      "returncode": 0,
+      "seconds": 3.951
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A3Data",
+      "returncode": 0,
+      "seconds": 3.855
+    },
+    {
+      "name": "RigidGHZ.Finite.SatLRATChunk",
+      "returncode": 0,
+      "seconds": 3.749
+    },
+    {
+      "name": "RigidGHZ.Finite.SatLRATPremises",
+      "returncode": 0,
+      "seconds": 3.485
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A3Proof.Context",
+      "returncode": 0,
+      "seconds": 3.252
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A3Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 3.37
+    },
+    {
+      "name": "RigidGHZ.Finite.ExactCoverAssemble",
+      "returncode": 0,
+      "seconds": 3.87
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A3",
+      "returncode": 0,
+      "seconds": 3.249
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A3Facts",
+      "returncode": 0,
+      "seconds": 3.544
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A5Data",
+      "returncode": 0,
+      "seconds": 4.328
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A5Proof.Context",
+      "returncode": 0,
+      "seconds": 3.326
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A5Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 3.479
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A5",
+      "returncode": 0,
+      "seconds": 3.636
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A5Facts",
+      "returncode": 0,
+      "seconds": 3.857
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A7Data",
+      "returncode": 0,
+      "seconds": 5.614
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A7Proof.Context",
+      "returncode": 0,
+      "seconds": 3.699
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A7Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 3.36
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A7",
+      "returncode": 0,
+      "seconds": 3.655
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A7Facts",
+      "returncode": 0,
+      "seconds": 4.244
+    },
+    {
+      "name": "RigidGHZ.Supplement.AffineSmallSeeds",
+      "returncode": 0,
+      "seconds": 3.658
+    },
+    {
+      "name": "RigidGHZ.Supplement.AffineDoubling",
+      "returncode": 0,
+      "seconds": 4.898
+    },
+    {
+      "name": "RigidGHZ.Supplement.AffineDegrees",
+      "returncode": 0,
+      "seconds": 4.354
+    },
+    {
+      "name": "RigidGHZ.Supplement.AffineOddSizes",
+      "returncode": 0,
+      "seconds": 3.61
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Basic",
+      "returncode": 0,
+      "seconds": 4.907
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Enumeration",
+      "returncode": 0,
+      "seconds": 4.823
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Transfer",
+      "returncode": 0,
+      "seconds": 4.463
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Height",
+      "returncode": 0,
+      "seconds": 4.38
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Rigidity",
+      "returncode": 0,
+      "seconds": 4.548
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenData",
+      "returncode": 0,
+      "seconds": 7.524
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck00",
+      "returncode": 0,
+      "seconds": 18.3
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck01",
+      "returncode": 0,
+      "seconds": 17.181
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck02",
+      "returncode": 0,
+      "seconds": 15.808
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck03",
+      "returncode": 0,
+      "seconds": 17.797
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck04",
+      "returncode": 0,
+      "seconds": 15.894
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck05",
+      "returncode": 0,
+      "seconds": 16.115
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck06",
+      "returncode": 0,
+      "seconds": 14.695
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck07",
+      "returncode": 0,
+      "seconds": 16.316
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck08",
+      "returncode": 0,
+      "seconds": 15.49
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck09",
+      "returncode": 0,
+      "seconds": 14.049
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck10",
+      "returncode": 0,
+      "seconds": 14.717
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck11",
+      "returncode": 0,
+      "seconds": 13.721
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck12",
+      "returncode": 0,
+      "seconds": 13.965
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck13",
+      "returncode": 0,
+      "seconds": 14.535
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck14",
+      "returncode": 0,
+      "seconds": 13.492
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck15",
+      "returncode": 0,
+      "seconds": 14.187
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck16",
+      "returncode": 0,
+      "seconds": 13.22
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck17",
+      "returncode": 0,
+      "seconds": 12.878
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck18",
+      "returncode": 0,
+      "seconds": 11.267
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck19A",
+      "returncode": 0,
+      "seconds": 5.334
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck19B",
+      "returncode": 0,
+      "seconds": 5.104
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck19C",
+      "returncode": 0,
+      "seconds": 4.617
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck19D",
+      "returncode": 0,
+      "seconds": 5.204
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenCheck19",
+      "returncode": 0,
+      "seconds": 3.621
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Eleven",
+      "returncode": 0,
+      "seconds": 3.616
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.ElevenFamily",
+      "returncode": 0,
+      "seconds": 3.549
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.TenData",
+      "returncode": 0,
+      "seconds": 5.51
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.TenCheck00",
+      "returncode": 0,
+      "seconds": 8.682
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.TenCheck01",
+      "returncode": 0,
+      "seconds": 8.423
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.TenCheck02",
+      "returncode": 0,
+      "seconds": 9.322
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.TenCheck03",
+      "returncode": 0,
+      "seconds": 8.478
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.TenCheck04",
+      "returncode": 0,
+      "seconds": 5.168
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Ten",
+      "returncode": 0,
+      "seconds": 3.88
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.GroupedEnumeration",
+      "returncode": 0,
+      "seconds": 4.297
+    },
+    {
+      "name": "RigidGHZ.Supplement.Linearity",
+      "returncode": 0,
+      "seconds": 3.856
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Geometry",
+      "returncode": 0,
+      "seconds": 4.087
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinData",
+      "returncode": 0,
+      "seconds": 30.853
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.BitEnumeration",
+      "returncode": 0,
+      "seconds": 3.826
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinBitData",
+      "returncode": 0,
+      "seconds": 7.347
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck00",
+      "returncode": 0,
+      "seconds": 9.175
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck01",
+      "returncode": 0,
+      "seconds": 9.626
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck02",
+      "returncode": 0,
+      "seconds": 8.504
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck03",
+      "returncode": 0,
+      "seconds": 9.26
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck04",
+      "returncode": 0,
+      "seconds": 8.525
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck05",
+      "returncode": 0,
+      "seconds": 10.916
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck06",
+      "returncode": 0,
+      "seconds": 10.729
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck07",
+      "returncode": 0,
+      "seconds": 8.725
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck08",
+      "returncode": 0,
+      "seconds": 8.748
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck09",
+      "returncode": 0,
+      "seconds": 9.183
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck10",
+      "returncode": 0,
+      "seconds": 8.937
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck11",
+      "returncode": 0,
+      "seconds": 9.476
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck12",
+      "returncode": 0,
+      "seconds": 8.451
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck13",
+      "returncode": 0,
+      "seconds": 8.812
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck14",
+      "returncode": 0,
+      "seconds": 8.614
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck15",
+      "returncode": 0,
+      "seconds": 10.471
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck16",
+      "returncode": 0,
+      "seconds": 8.839
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck17",
+      "returncode": 0,
+      "seconds": 10.414
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.LatinCheck18",
+      "returncode": 0,
+      "seconds": 7.247
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Latin",
+      "returncode": 0,
+      "seconds": 3.876
+    },
+    {
+      "name": "RigidGHZ.Supplement.Periodic.Families",
+      "returncode": 0,
+      "seconds": 3.721
+    },
+    {
+      "name": "RigidGHZ.Supplement.ThresholdArithmetic",
+      "returncode": 0,
+      "seconds": 4.062
+    },
+    {
+      "name": "RigidGHZ.Supplement.MatchingRestriction",
+      "returncode": 0,
+      "seconds": 3.708
+    },
+    {
+      "name": "RigidGHZ.Supplement.BoundedHelpers",
+      "returncode": 0,
+      "seconds": 3.812
+    },
+    {
+      "name": "RigidGHZ.Supplement.BalancedThresholdAssembly",
+      "returncode": 0,
+      "seconds": 4.508
+    },
+    {
+      "name": "RigidGHZ.Supplement.UnrestrictedThresholdAssembly",
+      "returncode": 0,
+      "seconds": 3.731
+    },
+    {
+      "name": "RigidGHZ.Finite.TwoEdgeCertificate",
+      "returncode": 0,
+      "seconds": 3.709
+    },
+    {
+      "name": "RigidGHZ.Finite.SixVertex",
+      "returncode": 0,
+      "seconds": 7.364
+    },
+    {
+      "name": "RigidGHZ.Finite.NineVertex",
+      "returncode": 0,
+      "seconds": 42.897
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U12Data",
+      "returncode": 0,
+      "seconds": 8.884
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U12Proof.Context",
+      "returncode": 0,
+      "seconds": 4.005
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U12Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 4.245
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U12",
+      "returncode": 0,
+      "seconds": 5.194
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U15Data",
+      "returncode": 0,
+      "seconds": 8.036
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U15Proof.Context",
+      "returncode": 0,
+      "seconds": 3.73
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U15Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 3.951
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U15",
+      "returncode": 0,
+      "seconds": 5.732
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U18Data",
+      "returncode": 0,
+      "seconds": 15.119
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U18Proof.Context",
+      "returncode": 0,
+      "seconds": 4.343
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U18Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 6.31
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U18",
+      "returncode": 0,
+      "seconds": 8.193
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U21Data",
+      "returncode": 0,
+      "seconds": 12.844
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U21Proof.Context",
+      "returncode": 0,
+      "seconds": 3.98
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U21Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 5.402
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U21",
+      "returncode": 0,
+      "seconds": 6.582
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U24Data",
+      "returncode": 0,
+      "seconds": 16.684
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U24Proof.Context",
+      "returncode": 0,
+      "seconds": 4.307
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U24Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 6.477
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.U24",
+      "returncode": 0,
+      "seconds": 7.673
+    },
+    {
+      "name": "RigidGHZ.Supplement.FreeSeedBank",
+      "returncode": 0,
+      "seconds": 3.461
+    },
+    {
+      "name": "RigidGHZ.Supplement.CyclicLiftData",
+      "returncode": 0,
+      "seconds": 4.11
+    },
+    {
+      "name": "RigidGHZ.Supplement.MarkedProjection",
+      "returncode": 0,
+      "seconds": 4.033
+    },
+    {
+      "name": "RigidGHZ.Supplement.CyclicLiftSlices",
+      "returncode": 0,
+      "seconds": 4.205
+    },
+    {
+      "name": "RigidGHZ.Supplement.CyclicLiftComplete",
+      "returncode": 0,
+      "seconds": 5.417
+    },
+    {
+      "name": "RigidGHZ.Supplement.CyclicLiftDegrees",
+      "returncode": 0,
+      "seconds": 4.762
+    },
+    {
+      "name": "RigidGHZ.Supplement.CyclicLift",
+      "returncode": 0,
+      "seconds": 4.537
+    },
+    {
+      "name": "RigidGHZ.Supplement.MarkedBinary",
+      "returncode": 0,
+      "seconds": 5.058
+    },
+    {
+      "name": "RigidGHZ.Supplement.AffineBounded",
+      "returncode": 0,
+      "seconds": 3.761
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A11Data",
+      "returncode": 0,
+      "seconds": 11.002
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A11Proof.Context",
+      "returncode": 0,
+      "seconds": 3.954
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A11Proof.Chunk000",
+      "returncode": 0,
+      "seconds": 4.048
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A11",
+      "returncode": 0,
+      "seconds": 4.868
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A11Facts",
+      "returncode": 0,
+      "seconds": 7.35
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A11Seed",
+      "returncode": 0,
+      "seconds": 3.79
+    },
+    {
+      "name": "RigidGHZ.Finite.Seeds.A13Data",
+      "returncode": 0,
+      "seconds": 17.675
+    }
+  ],
+  "passed": false,
+  "status": "stopped_after_scope_reduction",
+  "process_exit_code": 130,
+  "reason": "Additional supplementary finite examples and their dependent thresholds were removed from the primary delivery scope after the user asked whether they could be omitted. The stopped recovery build is not a failed mathematical proof and is not a completed supplementary replay."
+}

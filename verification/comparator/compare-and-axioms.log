@@ -1,0 +1,5 @@
+PASS: exact declarations and transitive statement definitions match.
+PASS: selected proof closures use only permitted axioms.
+Exported axiom: propext
+Exported axiom: Quot.sound
+Exported axiom: Classical.choice

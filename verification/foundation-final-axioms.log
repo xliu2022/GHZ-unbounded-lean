@@ -1,0 +1,29 @@
+'RigidGHZ.Supplement.Periodic.Scheme.configEquivMatching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Scheme.perfectMatching_count_eq_trace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RigidGHZ.Supplement.Periodic.MatrixHeight.strict_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.MatrixHeight.exceptional_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Eleven.rigidFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Ten.rigidFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Latin.rigidFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Eleven.perfectMatching_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Ten.perfectMatching_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Latin.perfectMatching_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Eleven.configuration_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Eleven.transition_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Ten.configuration_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Ten.transition_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Latin.configuration_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Latin.transition_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Latin.weightedArcs_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.Supplement.Periodic.Latin.weightedArcs_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidGHZ.RectangleAsymptotics.rectangular_asymptotic_constants' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RigidGHZ.RectangleAsymptotics.rectangular_sequence_support_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RigidGHZ.RectangleAsymptotics.rectangular_sequence_with_strict_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

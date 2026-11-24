@@ -1,0 +1,14 @@
+New finite comparison: successful Lean compilation and proof-dependency audit.
+
+NineDiscreteThings.lean: exit 0 (25.1 seconds).
+NineNonisomorphism.lean: exit 0 (10.3 seconds).
+Each compiled serially with lean -j1 -M2800 and produced its .olean.
+The subsequent collectAxioms audit completed with exit 0 and rejects any axiom
+outside propext, Classical.choice, Quot.sound.
+
+RigidGHZ.Finite.discreteThings2024_rigid: [propext, Classical.choice, Quot.sound]
+RigidGHZ.Finite.fourCodegreeHyperedges_card_relabel: [propext, Classical.choice, Quot.sound]
+RigidGHZ.Finite.thirteen_fourCodegree_count: [propext, Classical.choice, Quot.sound]
+RigidGHZ.Finite.discreteThings2024_fourCodegree_count: [propext, Classical.choice, Quot.sound]
+RigidGHZ.Finite.thirteen_not_isomorphic_discreteThings2024: [propext, Classical.choice, Quot.sound]
+RigidGHZ.Finite.algebraic_not_isomorphic_discreteThings2024: [propext, Classical.choice, Quot.sound]
